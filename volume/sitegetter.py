@@ -26,7 +26,7 @@ from tqdm import tqdm
 def dump_assert(file: str):
     assert file is not None, 'File parameter must be specified when dump=True'
 
-def get_osebx_htmlfile(url: str, timeout: int=cng.DEFAULT_TIMEOUT, wait_target_class: str=None,
+def get_osebx_htmlfile(url: str, timeout: int=2, wait_target_class: str=None,
                        verbose: int=1, dump: bool=True, file: str=None) -> str:
     '''Load OSEBX html files using selenium'''
 
@@ -69,3 +69,12 @@ def get_osebx_htmlfile(url: str, timeout: int=cng.DEFAULT_TIMEOUT, wait_target_c
             file.write(page_src)
 
     return page_src
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--disable-gpu")
+
+driver = webdriver.Chrome(options=chrome_options)
+driver.get("google.com")
