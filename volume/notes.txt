@@ -1,0 +1,1 @@
+props.pageprops.search.metadata.paging
