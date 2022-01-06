@@ -11,7 +11,7 @@ import pathlib
 import shutil
 import random
 
-TMP_DIR = pathlib.Path(tempfile.gettempdir()) / "apartmentscience" / "indexjsons"
+TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
 
 logger = logging.getLogger(__name__)
 logging.basicConfig()
@@ -47,15 +47,15 @@ def clearTempdir():
 
 
 def storeResponseInTempdir(response: dict):
-    TMP_DIR.mkdir(exist_ok=True)
+    TMP_DIR.mkdir(exist_ok=True, parents=True)
     filename = "response" + utils.isoNow() + ".json"
     (TMP_DIR / filename).write_text(json.dumps(response, indent=2))
-    logger.info(f"Stored response {filename} in {TMP_DIR}")
+    logger.info(f"Stored response {TMP_DIR / filename}")
 
 
 def getResponse(params: dict, mock: bool = False):
     if mock:
-        with open("response.json", "r") as f:
+        with open(os.path.join("mock", "response.json"), "r") as f:
             responseJson = json.load(f)
     else:
         response = requests.get(URL, params)
@@ -63,9 +63,9 @@ def getResponse(params: dict, mock: bool = False):
     return responseJson
 
 
-def obtainRawData():
+def obtainRawIndexData():
     responseJson = getResponse(getParams(1))
-    logger.info("Start obtainRawData")
+    logger.info("Start obtainRawIndexData")
 
     # utils.jprint(responseJson, "response.json")
     logger.info(f"Sucessfully obtained first response")
@@ -81,7 +81,7 @@ def obtainRawData():
         params = getParams(i)
         logger.debug(f"{params}")
 
-        responseJson = getResponse(params, False)
+        responseJson = getResponse(params, True)
         logger.debug(responseJson)
         storeResponseInTempdir(responseJson)
 
@@ -90,5 +90,13 @@ def obtainRawData():
         time.sleep(waitTime)
 
 
+def obtainRawDetailedData():
+    """
+    Assumes index data is available (generated from obtainRawIndexData)
+    """
+    print(os.listdir(TMP_DIR))
+
+
 if __name__ == "__main__":
-    obtainRawData()
+    # obtainRawIndexData()
+    obtainRawDetailedData()
