@@ -10,6 +10,7 @@ import os
 import pathlib
 import shutil
 import random
+from pprint import pprint
 
 TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
 
@@ -18,6 +19,7 @@ logging.basicConfig()
 logger.setLevel(logging.DEBUG)
 
 URL = "https://www.finn.no/api/search-qf"
+
 
 def getParams(page: int):
     return {
@@ -79,11 +81,14 @@ def obtainRawDetailedData():
     """
     Assumes index data is available (generated from obtainRawIndexData)
     """
-    print(os.listdir(TMP_DIR))
+    for file in os.listdir(TMP_DIR):
+        with open(os.path.join(TMP_DIR, file), "r") as f:
+            index = json.load(f)
 
 
 if __name__ == "__main__":
     from http.client import HTTPConnection
+
     HTTPConnection.debuglevel = 1
 
     requests_log = logging.getLogger("requests.packages.urllib3")
