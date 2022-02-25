@@ -11,6 +11,7 @@ import pathlib
 import shutil
 import random
 from pprint import pprint
+from classes import Doc
 
 TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
 
@@ -77,13 +78,16 @@ def obtainRawIndexData():
         time.sleep(waitTime)
 
 
-def obtainRawDetailedData():
+def storeIndexData():
     """
     Assumes index data is available (generated from obtainRawIndexData)
     """
     for file in os.listdir(TMP_DIR):
         with open(os.path.join(TMP_DIR, file), "r") as f:
-            index = json.load(f)
+            docs: list[dict] = json.load(f)["docs"]
+
+        for doc in docs:
+            doc = Doc(**doc)
 
 
 if __name__ == "__main__":
@@ -94,5 +98,5 @@ if __name__ == "__main__":
     requests_log = logging.getLogger("requests.packages.urllib3")
     requests_log.setLevel(logging.DEBUG)
 
-    obtainRawIndexData()
-    # obtainRawDetailedData()
+    # obtainRawIndexData()
+    storeIndexData()
