@@ -17,7 +17,7 @@ depends_on = None
 
 
 def upgrade():
-    # Comments represents field that are in response, but not used
+    # Comments represents field that 6are in response, but not used
     op.create_table(
         "preview",
         sa.Column("type", sa.UnicodeText),

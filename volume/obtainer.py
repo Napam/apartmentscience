@@ -1,17 +1,21 @@
+from asyncio import futures
 import json
+from pydoc import doc
+from typing import Iterable
 import requests
 import utils
 import classes
 import time
 import logging
-import sys
-import tempfile
 import os
 import pathlib
 import shutil
 import random
 from pprint import pprint
 from classes import Doc
+import sqlalchemy as sa
+
+engine = sa.create_engine("sqlite:///test.db", echo=True, future=True)
 
 TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
 
@@ -25,11 +29,11 @@ URL = "https://www.finn.no/api/search-qf"
 def getParams(page: int):
     return {
         "searchkey": "SEARCH_ID_REALESTATE_HOMES",
-        "lat": "60.386516342860716",
-        "lon": "5.32861852263332",
-        "radius": 8000,
-        "sort": "PUBLISHED_DESC",
-        "location": "1.22046.20220",
+        # "lat": "60.386516342860716",
+        # "lon": "5.32861852263332",
+        # "radius": 8000,
+        # "sort": "PUBLISHED_DESC",
+        # "location": "1.22046.20220",
         "page": page,
     }
 
@@ -78,16 +82,141 @@ def obtainRawIndexData():
         time.sleep(waitTime)
 
 
+def docs(flatten: bool = True):
+    for file in os.listdir(TMP_DIR):
+        with open(os.path.join(TMP_DIR, file), "r") as f:
+            docs: list[dict] = json.load(f)["docs"]
+            for doc in docs:
+                yield utils.flattenDict(doc) if flatten else doc
+
+
 def storeIndexData():
     """
     Assumes index data is available (generated from obtainRawIndexData)
     """
-    for file in os.listdir(TMP_DIR):
-        with open(os.path.join(TMP_DIR, file), "r") as f:
-            docs: list[dict] = json.load(f)["docs"]
+    for doc in docs():
+        print(doc)
+        # conn: sa.engine.Connection
+        # with engine.connect() as conn:
+        #     conn.execute(
+        #         sa.text(
+        #             """
+        #         INSERT INTO preview (
+        #             type,
+        #             ad_id,
+        #             main_search_key,
+        #             heading,
+        #             location,
+        #             image_url,
+        #             image_path,
+        #             image_height,
+        #             image_width,
+        #             image_aspect_ratio,
+        #             flags,
+        #             styling,
+        #             timestamp,
+        #             logo_url,
+        #             logo_path,
+        #             price_range_suggestion_amount,
+        #             price_range_suggestion_currency,
+        #             price_range_total_amount_from,
+        #             price_range_total_amount_to,
+        #             price_range_total_currency_code,
+        #             price_suggestion_amount,
+        #             price_suggestion_currency_code,
+        #             price_total_amount,
+        #             price_total_currency,
+        #             price_shared_cost_amount,
+        #             price_shared_cost_currency,
+        #             area_range_size_from,
+        #             area_range_size_to,
+        #             area_range_unit,
+        #             area_range_description,
+        #             area_plot_size,
+        #             area_plot_unit,
+        #             area_plot_description,
+        #             organisation_name,
+        #             local_area_name,
+        #             number_of_bedrooms,
+        #             owner_type_description,
+        #             property_type_description,
+        #             viewing_times,
+        #             coordinates_lat,
+        #             coordinates_lon,
+        #             image_urls,
+        #             bedrooms_range_start,
+        #             bedrooms_range_end,
+        #             ad_link,
+        #             area
+        #         ) VALUES (
+        #             :type,
+        #             :ad_id,
+        #             :main_search_key,
+        #             :heading,
+        #             :location,
+        #             :image_url,
+        #             :image_path,
+        #             :image_height,
+        #             :image_width,
+        #             :image_aspect_ratio,
+        #             :flags,
+        #             :styling,
+        #             :timestamp,
+        #             :logo_url,
+        #             :logo_path,
+        #             :price_range_suggestion_amount,
+        #             :price_range_suggestion_currency,
+        #             :price_range_total_amount_from,
+        #             :price_range_total_amount_to,
+        #             :price_range_total_currency_code,
+        #             :price_suggestion_amount,
+        #             :price_suggestion_currency_code,
+        #             :price_total_amount,
+        #             :price_total_currency,
+        #             :price_shared_cost_amount,
+        #             :price_shared_cost_currency,
+        #             :area_range_size_from,
+        #             :area_range_size_to,
+        #             :area_range_unit,
+        #             :area_range_description,
+        #             :area_plot_size,
+        #             :area_plot_unit,
+        #             :area_plot_description,
+        #             :organisation_name,
+        #             :local_area_name,
+        #             :number_of_bedrooms,
+        #             :owner_type_description,
+        #             :property_type_description,
+        #             :viewing_times,
+        #             :coordinates_lat,
+        #             :coordinates_lon,
+        #             :image_urls,
+        #             :bedrooms_range_start,
+        #             :bedrooms_range_end,
+        #             :ad_link,
+        #             :area
+        #         )
+        #         """
+        #         ),
+        #         [vars(Doc(**utils.flattenDict(doc))) for doc in docs],
+        #     )
+        #     conn.commit()
 
-        for doc in docs:
-            doc = Doc(**doc)
+
+def docAnalyze():
+    union: dict[str, set] = {}
+    for doc in docs():
+        for key, val in doc.items():
+            union.setdefault(key, set())
+            t = type(val)
+            if t == list:
+                val: list
+                union[key].add("[" + ",".join(type(item).__name__ for item in val) + "]")
+            else:
+                union[key].add(type(val).__name__)
+
+    pprint(union)
+    pprint(union.__len__())
 
 
 if __name__ == "__main__":
@@ -99,4 +228,5 @@ if __name__ == "__main__":
     requests_log.setLevel(logging.DEBUG)
 
     # obtainRawIndexData()
-    storeIndexData()
+    # storeIndexData()
+    docAnalyze()

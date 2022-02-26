@@ -1,5 +1,5 @@
 import json
-from typing import MutableMapping
+from typing import Iterable, MutableMapping
 from pygments import highlight, lexers, formatters
 import datetime as dt
 
