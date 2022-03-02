@@ -95,128 +95,118 @@ def storeIndexData():
     Assumes index data is available (generated from obtainRawIndexData)
     """
     for doc in docs():
-        print(doc)
-        # conn: sa.engine.Connection
-        # with engine.connect() as conn:
-        #     conn.execute(
-        #         sa.text(
-        #             """
-        #         INSERT INTO preview (
-        #             type,
-        #             ad_id,
-        #             main_search_key,
-        #             heading,
-        #             location,
-        #             image_url,
-        #             image_path,
-        #             image_height,
-        #             image_width,
-        #             image_aspect_ratio,
-        #             flags,
-        #             styling,
-        #             timestamp,
-        #             logo_url,
-        #             logo_path,
-        #             price_range_suggestion_amount,
-        #             price_range_suggestion_currency,
-        #             price_range_total_amount_from,
-        #             price_range_total_amount_to,
-        #             price_range_total_currency_code,
-        #             price_suggestion_amount,
-        #             price_suggestion_currency_code,
-        #             price_total_amount,
-        #             price_total_currency,
-        #             price_shared_cost_amount,
-        #             price_shared_cost_currency,
-        #             area_range_size_from,
-        #             area_range_size_to,
-        #             area_range_unit,
-        #             area_range_description,
-        #             area_plot_size,
-        #             area_plot_unit,
-        #             area_plot_description,
-        #             organisation_name,
-        #             local_area_name,
-        #             number_of_bedrooms,
-        #             owner_type_description,
-        #             property_type_description,
-        #             viewing_times,
-        #             coordinates_lat,
-        #             coordinates_lon,
-        #             image_urls,
-        #             bedrooms_range_start,
-        #             bedrooms_range_end,
-        #             ad_link,
-        #             area
-        #         ) VALUES (
-        #             :type,
-        #             :ad_id,
-        #             :main_search_key,
-        #             :heading,
-        #             :location,
-        #             :image_url,
-        #             :image_path,
-        #             :image_height,
-        #             :image_width,
-        #             :image_aspect_ratio,
-        #             :flags,
-        #             :styling,
-        #             :timestamp,
-        #             :logo_url,
-        #             :logo_path,
-        #             :price_range_suggestion_amount,
-        #             :price_range_suggestion_currency,
-        #             :price_range_total_amount_from,
-        #             :price_range_total_amount_to,
-        #             :price_range_total_currency_code,
-        #             :price_suggestion_amount,
-        #             :price_suggestion_currency_code,
-        #             :price_total_amount,
-        #             :price_total_currency,
-        #             :price_shared_cost_amount,
-        #             :price_shared_cost_currency,
-        #             :area_range_size_from,
-        #             :area_range_size_to,
-        #             :area_range_unit,
-        #             :area_range_description,
-        #             :area_plot_size,
-        #             :area_plot_unit,
-        #             :area_plot_description,
-        #             :organisation_name,
-        #             :local_area_name,
-        #             :number_of_bedrooms,
-        #             :owner_type_description,
-        #             :property_type_description,
-        #             :viewing_times,
-        #             :coordinates_lat,
-        #             :coordinates_lon,
-        #             :image_urls,
-        #             :bedrooms_range_start,
-        #             :bedrooms_range_end,
-        #             :ad_link,
-        #             :area
-        #         )
-        #         """
-        #         ),
-        #         [vars(Doc(**utils.flattenDict(doc))) for doc in docs],
-        #     )
-        #     conn.commit()
-
-
-def docAnalyze():
-    union: dict[str, set] = {}
-    for doc in docs():
-        for key, val in doc.items():
-            union.setdefault(key, set())
-            t = type(val)
-            if t == list:
-                val: list
-                union[key].add("[" + ",".join(type(item).__name__ for item in val) + "]")
-            else:
-                union[key].add(type(val).__name__)
-
-    pprint(union)
-    pprint(union.__len__())
+        pprint(vars(Doc(**utils.flattenDict(doc))))
+        conn: sa.engine.Connection
+        with engine.connect() as conn:
+            conn.execute(
+                sa.text(
+                    """
+                INSERT INTO preview (
+                    type,
+                    ad_id,
+                    main_search_key,
+                    heading,
+                    location,
+                    image_url,
+                    image_path,
+                    image_height,
+                    image_width,
+                    image_aspect_ratio,
+                    flags,
+                    styling,
+                    timestamp,
+                    logo_url,
+                    logo_path,
+                    price_suggestion_amount,
+                    price_suggestion_currency_code,
+                    price_total_amount,
+                    price_total_currency_code,
+                    price_shared_cost_amount,
+                    price_shared_cost_currency_code,
+                    area_range_size_from,
+                    area_range_size_to,
+                    area_range_unit,
+                    area_range_description,
+                    area_plot_size,
+                    area_plot_unit,
+                    area_plot_description,
+                    organisation_name,
+                    local_area_name,
+                    number_of_bedrooms,
+                    owner_type_description,
+                    property_type_description,
+                    viewing_times,
+                    coordinates_lat,
+                    coordinates_lon,
+                    image_urls,
+                    ad_link,
+                    area_size,
+                    area_unit,
+                    area_description,
+                    price_range_suggestion_amount_from,
+                    price_range_suggestion_amount_to,
+                    price_range_suggestion_currency_code,
+                    price_range_total_amount_from,
+                    price_range_total_amount_to,
+                    price_range_total_currency_code,
+                    bedrooms_range_start,
+                    bedrooms_range_end
+                ) VALUES (
+                    :type,
+                    :ad_id,
+                    :main_search_key,
+                    :heading,
+                    :location,
+                    :image_url,
+                    :image_path,
+                    :image_height,
+                    :image_width,
+                    :image_aspect_ratio,
+                    :flags,
+                    :styling,
+                    :timestamp,
+                    :logo_url,
+                    :logo_path,
+                    :price_suggestion_amount,
+                    :price_suggestion_currency_code,
+                    :price_total_amount,
+                    :price_total_currency_code,
+                    :price_shared_cost_amount,
+                    :price_shared_cost_currency_code,
+                    :area_range_size_from,
+                    :area_range_size_to,
+                    :area_range_unit,
+                    :area_range_description,
+                    :area_plot_size,
+                    :area_plot_unit,
+                    :area_plot_description,
+                    :organisation_name,
+                    :local_area_name,
+                    :number_of_bedrooms,
+                    :owner_type_description,
+                    :property_type_description,
+                    :viewing_times,
+                    :coordinates_lat,
+                    :coordinates_lon,
+                    :image_urls,
+                    :ad_link,
+                    :area_size,
+                    :area_unit,
+                    :area_description,
+                    :price_range_suggestion_amount_from,
+                    :price_range_suggestion_amount_to,
+                    :price_range_suggestion_currency_code,
+                    :price_range_total_amount_from,
+                    :price_range_total_amount_to,
+                    :price_range_total_currency_code,
+                    :bedrooms_range_start,
+                    :bedrooms_range_end
+                )
+                """
+                ),
+                [vars(Doc(**utils.flattenDict(doc))) for doc in docs()],
+            )
+            conn.commit()
 
 
 if __name__ == "__main__":
@@ -224,9 +214,9 @@ if __name__ == "__main__":
 
     HTTPConnection.debuglevel = 1
 
-    requests_log = logging.getLogger("requests.packages.urllib3")
-    requests_log.setLevel(logging.DEBUG)
+    # requests_log = logging.getLogger("requests.packages.urllib3")
+    # requests_log.setLevel(logging.DEBUG)
 
     # obtainRawIndexData()
-    # storeIndexData()
-    docAnalyze()
+    storeIndexData()
+    # docAnalyze()
