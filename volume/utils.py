@@ -1,4 +1,5 @@
 import json
+from types import FunctionType
 from typing import Iterable, MutableMapping
 from pygments import highlight, lexers, formatters
 import datetime as dt
@@ -15,17 +16,22 @@ def jprint(data: dict, file: str | None = None, indent: int = 4) -> str | None:
         print(highlight(dump, lexers.JsonLexer(), formatters.TerminalFormatter(bg="dark")))
 
 
-def _flatten_dict_gen(d: MutableMapping, parentKey: str, sep: str):
+def _flatten_dict_gen(d: MutableMapping, parentKey: str, sep: str, mapper: FunctionType):
     for k, v in d.items():
         newKey = parentKey + sep + k if parentKey else k
         if isinstance(v, MutableMapping):
             yield from flattenDict(v, newKey, sep=sep).items()
         else:
-            yield newKey, v
+            yield newKey, mapper(v)
 
 
-def flattenDict(d: MutableMapping, parent_key: str = "", sep: str = "_"):
-    return dict(_flatten_dict_gen(d, parent_key, sep))
+def flattenDict(
+    d: MutableMapping, parent_key: str = "", sep: str = "_", mapper: FunctionType | None = None
+):
+    if mapper is None:
+        mapper = lambda x: x
+
+    return dict(_flatten_dict_gen(d, parent_key, sep, mapper))
 
 
 if __name__ == "__main__":

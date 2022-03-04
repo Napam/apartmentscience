@@ -1,6 +1,4 @@
-from asyncio import futures
 import json
-from pydoc import doc
 from typing import Iterable
 import requests
 import utils
@@ -204,7 +202,7 @@ def storeIndexData():
                 )
                 """
                 ),
-                [vars(Doc(**utils.flattenDict(doc))) for doc in docs()],
+                [vars(Doc(**utils.flattenDict(doc, mapper=lambda x: str(x)))) for doc in docs()],
             )
             conn.commit()
 
