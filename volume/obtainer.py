@@ -1,6 +1,5 @@
 import json
 from typing import Iterable
-import requests
 import utils
 import classes
 import time
@@ -12,6 +11,8 @@ import random
 from pprint import pprint
 from classes import Doc
 import sqlalchemy as sa
+import asyncio
+import aiohttp
 
 engine = sa.create_engine("sqlite:///test.db", echo=True, future=True)
 
@@ -48,36 +49,36 @@ def storeResponseInTempdir(response: dict):
     logger.info(f"Stored response {TMP_DIR / filename}")
 
 
-def getResponse(params: dict, mock: bool = False):
+async def getResponse(
+    session: aiohttp.ClientSession, params: dict, mock: bool = False, sleepscale: int = 5
+):
+    await asyncio.sleep(random.random() * 5)
     logger.debug(f"getResponse with params: {params}")
     if mock:
         with open(os.path.join("mock", "response.json"), "r") as f:
-            responseJson = json.load(f)
-    else:
-        response = requests.get(URL, params)
-        responseJson = response.json()
+            return json.load(f)
+    response = await session.request("GET", url=URL, params=params)
+    responseJson = await response.json()
+    storeResponseInTempdir(responseJson)
     return responseJson
 
 
-def obtainRawIndexData():
-    responseJson = getResponse(getParams(1))
+async def obtainRawIndexData():
     logger.info("Start obtainRawIndexData")
-    logger.info(f"Sucessfully obtained first response")
-
     clearTempdir()
-    storeResponseInTempdir(responseJson)
-
+    session = aiohttp.ClientSession()
+    responseJson = await getResponse(session, getParams(1))
+    logger.info(f"Sucessfully obtained first response")
     paging = classes.Paging(**responseJson["metadata"]["paging"])
     numberOfPages = paging.last
     logger.info(f"Total number of pages: {numberOfPages}")
-    for i in range(2, numberOfPages + 1):
-        params = getParams(i)
-        responseJson = getResponse(params)
-        storeResponseInTempdir(responseJson)
-
-        waitTime = 0.2 + random.random()
-        logger.info(f"Waiting {waitTime}s before next call")
-        time.sleep(waitTime)
+    await asyncio.gather(
+        *(
+            asyncio.create_task(getResponse(session, getParams(i)))
+            for i in range(2, numberOfPages + 1)
+        )
+    )
+    await session.close()
 
 
 def docs(flatten: bool = True):
@@ -210,11 +211,11 @@ def storeIndexData():
 if __name__ == "__main__":
     from http.client import HTTPConnection
 
-    HTTPConnection.debuglevel = 1
+    # HTTPConnection.debuglevel = 1
 
     # requests_log = logging.getLogger("requests.packages.urllib3")
     # requests_log.setLevel(logging.DEBUG)
 
-    # obtainRawIndexData()
-    storeIndexData()
+    asyncio.run(obtainRawIndexData())
+    # storeIndexData()
     # docAnalyze()

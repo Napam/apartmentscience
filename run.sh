@@ -9,9 +9,10 @@ error() {
     echo "u do sumting wong"
 }
 
-while getopts "du" option; do
+while getopts "dpu" option; do
     case $option in
         d) DOCKER_FLAGS+="-d ";;
+        p) DOCKER_FLAGS+="--publish 7000:7000 ";;
         u) USER=${OPTARG};;
         *) error; exit;;
     esac
@@ -20,7 +21,10 @@ done
 # $@ is an array or something, start at $OPTIND and rest
 ARGS+=${@:$OPTIND}
 
-docker run ${DOCKER_FLAGS} -it --hostname ${CONTAINER_NAME} \
+docker run ${DOCKER_FLAGS} \
+    -it \
+    --rm \
+    --hostname ${CONTAINER_NAME} \
     --user ${USER} \
     -v "$(pwd)/volume":/project \
-    --rm --name ${CONTAINER_NAME} ${IMG_NAME} ${ARGS}
+    --name ${CONTAINER_NAME} ${IMG_NAME} ${ARGS}
