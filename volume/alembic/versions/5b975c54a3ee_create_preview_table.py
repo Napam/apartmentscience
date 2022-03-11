@@ -7,6 +7,7 @@ Create Date: 2022-01-06 20:11:37.954841
 """
 from alembic import op
 import sqlalchemy as sa
+import datetime
 
 
 # revision identifiers, used by Alembic.
@@ -20,6 +21,8 @@ def upgrade():
     # Comments represents field that 6are in response, but not used
     op.create_table(
         "preview",
+        sa.Column("_id", sa.Integer, autoincrement=True),
+        sa.Column("_last_updated", sa.DateTime, onupdate=datetime.datetime.now()),
         sa.Column("type", sa.UnicodeText),
         sa.Column("ad_id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),

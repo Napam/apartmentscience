@@ -1,6 +1,9 @@
-from dataclasses import dataclass, fields, _MISSING_TYPE
-from os import times
+from dataclasses import dataclass
 from typing import Any
+import sqlalchemy as sa
+from sqlalchemy import orm
+
+mapper_registry = orm.registry()
 
 
 @dataclass
@@ -20,8 +23,61 @@ class FinnResponse:
     pageMetadata: list[dict[str, Any]]
 
 
+@mapper_registry.mapped
 @dataclass
 class Doc:
+    __table__ = sa.Table(
+        "preview",
+        sa.Column("type", sa.UnicodeText),
+        sa.Column("ad_id", sa.Integer),
+        sa.Column("main_search_key", sa.UnicodeText),
+        sa.Column("heading", sa.UnicodeText),
+        sa.Column("location", sa.UnicodeText),
+        sa.Column("image_url", sa.UnicodeText),
+        sa.Column("image_path", sa.UnicodeText),
+        sa.Column("image_height", sa.Integer),
+        sa.Column("image_width", sa.Integer),
+        sa.Column("image_aspect_ratio", sa.Float),
+        sa.Column("flags", sa.UnicodeText),
+        sa.Column("styling", sa.UnicodeText),
+        sa.Column("timestamp", sa.Integer),
+        sa.Column("logo_url", sa.UnicodeText),
+        sa.Column("logo_path", sa.UnicodeText),
+        sa.Column("price_suggestion_amount", sa.Integer),
+        sa.Column("price_suggestion_currency_code", sa.UnicodeText),
+        sa.Column("price_total_amount", sa.Integer),
+        sa.Column("price_total_currency_code", sa.UnicodeText),
+        sa.Column("price_shared_cost_amount", sa.Integer),
+        sa.Column("price_shared_cost_currency_code", sa.UnicodeText),
+        sa.Column("area_range_size_from", sa.Integer),
+        sa.Column("area_range_size_to", sa.Integer),
+        sa.Column("area_range_unit", sa.UnicodeText),
+        sa.Column("area_range_description", sa.UnicodeText),
+        sa.Column("area_plot_size", sa.Integer),
+        sa.Column("area_plot_unit", sa.UnicodeText),
+        sa.Column("area_plot_description", sa.UnicodeText),
+        sa.Column("organisation_name", sa.UnicodeText),
+        sa.Column("local_area_name", sa.UnicodeText),
+        sa.Column("number_of_bedrooms", sa.Integer),
+        sa.Column("owner_type_description", sa.UnicodeText),
+        sa.Column("property_type_description", sa.UnicodeText),
+        sa.Column("viewing_times", sa.UnicodeText),
+        sa.Column("coordinates_lat", sa.Float),
+        sa.Column("coordinates_lon", sa.Float),
+        sa.Column("image_urls", sa.UnicodeText),
+        sa.Column("ad_link", sa.UnicodeText),
+        sa.Column("area_size", sa.Integer),
+        sa.Column("area_unit", sa.UnicodeText),
+        sa.Column("area_description", sa.UnicodeText),
+        sa.Column("price_range_suggestion_amount_from", sa.Integer),
+        sa.Column("price_range_suggestion_amount_to", sa.Integer),
+        sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
+        sa.Column("price_range_total_amount_from", sa.Integer),
+        sa.Column("price_range_total_amount_to", sa.Integer),
+        sa.Column("price_range_total_currency_code", sa.UnicodeText),
+        sa.Column("bedrooms_range_start", sa.Integer),
+        sa.Column("bedrooms_range_end", sa.Integer),
+    )
     type: str = None
     ad_id: int = None
     main_search_key: str = None
@@ -43,8 +99,8 @@ class Doc:
     price_total_currency_code: str = None
     price_shared_cost_amount: int = None
     price_shared_cost_currency_code: str = None
-    area_range_size_from: int = None
-    area_range_size_to: int = None
+    area_range_size_from: None | int = None
+    area_range_size_to: None | int = None
     area_range_unit: str = None
     area_range_description: str = None
     area_plot_size: int = None

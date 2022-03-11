@@ -52,7 +52,7 @@ def storeResponseInTempdir(response: dict):
 async def getResponse(
     session: aiohttp.ClientSession, params: dict, mock: bool = False, sleepscale: int = 5
 ):
-    await asyncio.sleep(random.random() * 5)
+    await asyncio.sleep(random.random() * sleepscale)
     logger.debug(f"getResponse with params: {params}")
     if mock:
         with open(os.path.join("mock", "response.json"), "r") as f:
@@ -74,7 +74,7 @@ async def obtainRawIndexData():
     logger.info(f"Total number of pages: {numberOfPages}")
     await asyncio.gather(
         *(
-            asyncio.create_task(getResponse(session, getParams(i)))
+            asyncio.create_task(getResponse(session, getParams(i), sleepscale=numberOfPages * 0.075))
             for i in range(2, numberOfPages + 1)
         )
     )

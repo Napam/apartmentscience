@@ -43,6 +43,7 @@ def flatTypeMapToPythonClassString(typeMap: dict[str, set], name: str, tab: str 
         buffer.write(f"{' | '.join(extractTypeString(t) for t in types)} = None")
         buffer.write(f"\n{tab}")
     print(buffer.getvalue())
+    buffer.close()
 
 
 if __name__ == "__main__":
