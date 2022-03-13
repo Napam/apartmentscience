@@ -1,27 +1,13 @@
 import io
-import os
-import json
 from types import NoneType
 
-from attr import frozen
 import utils
-import pathlib
 from pprint import pprint
-
-TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
-
-
-def docs(flatten: bool = True):
-    for file in os.listdir(TMP_DIR):
-        with open(os.path.join(TMP_DIR, file), "r") as f:
-            docs: list[dict] = json.load(f)["docs"]
-            for doc in docs:
-                yield utils.flattenDict(doc) if flatten else doc
 
 
 def typeMapFromFlatDict():
     union: dict[str, set] = {}
-    for doc in docs():
+    for doc in utils.docs():
         for key, val in doc.items():
             union.setdefault(key, set())
             union[key].add(type(val))
