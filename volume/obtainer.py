@@ -11,12 +11,13 @@ import random
 from pprint import pprint
 from classes import Doc
 import sqlalchemy as sa
+from sqlalchemy import orm
 import asyncio
 import aiohttp
 
-engine = sa.create_engine("sqlite:///test.db", echo=True, future=True)
+engine = sa.create_engine("sqlite:///test.db", echo=False, future=True)
 
-TMP_DIR = pathlib.Path("data") / "apartmentscience" / "indexjsons"
+TMP_DIR = pathlib.Path("data") / "indexjsons"
 
 logger = logging.getLogger(__name__)
 logging.basicConfig()
@@ -42,9 +43,10 @@ def clearTempdir():
         shutil.rmtree(TMP_DIR)
 
 
-def storeResponseInTempdir(response: dict):
+def storeResponseInTempdir(response: dict, page: int):
     TMP_DIR.mkdir(exist_ok=True, parents=True)
-    filename = "response" + utils.isoNow() + ".json"
+    # filename = "response_" + "page_" + utils.isoNow() + ".json"
+    filename = f"response_page{page}_{utils.isoNow()}.json"
     (TMP_DIR / filename).write_text(json.dumps(response, indent=2))
     logger.info(f"Stored response {TMP_DIR / filename}")
 
@@ -59,7 +61,7 @@ async def getResponse(
             return json.load(f)
     response = await session.request("GET", url=URL, params=params)
     responseJson = await response.json()
-    storeResponseInTempdir(responseJson)
+    storeResponseInTempdir(responseJson, params["page"])
     return responseJson
 
 
@@ -93,119 +95,10 @@ def storeIndexData():
     """
     Assumes index data is available (generated from obtainRawIndexData)
     """
-    for doc in docs():
-        pprint(vars(Doc(**utils.flattenDict(doc))))
-        conn: sa.engine.Connection
-        with engine.connect() as conn:
-            conn.execute(
-                sa.text(
-                    """
-                INSERT INTO preview (
-                    type,
-                    ad_id,
-                    main_search_key,
-                    heading,
-                    location,
-                    image_url,
-                    image_path,
-                    image_height,
-                    image_width,
-                    image_aspect_ratio,
-                    flags,
-                    styling,
-                    timestamp,
-                    logo_url,
-                    logo_path,
-                    price_suggestion_amount,
-                    price_suggestion_currency_code,
-                    price_total_amount,
-                    price_total_currency_code,
-                    price_shared_cost_amount,
-                    price_shared_cost_currency_code,
-                    area_range_size_from,
-                    area_range_size_to,
-                    area_range_unit,
-                    area_range_description,
-                    area_plot_size,
-                    area_plot_unit,
-                    area_plot_description,
-                    organisation_name,
-                    local_area_name,
-                    number_of_bedrooms,
-                    owner_type_description,
-                    property_type_description,
-                    viewing_times,
-                    coordinates_lat,
-                    coordinates_lon,
-                    image_urls,
-                    ad_link,
-                    area_size,
-                    area_unit,
-                    area_description,
-                    price_range_suggestion_amount_from,
-                    price_range_suggestion_amount_to,
-                    price_range_suggestion_currency_code,
-                    price_range_total_amount_from,
-                    price_range_total_amount_to,
-                    price_range_total_currency_code,
-                    bedrooms_range_start,
-                    bedrooms_range_end
-                ) VALUES (
-                    :type,
-                    :ad_id,
-                    :main_search_key,
-                    :heading,
-                    :location,
-                    :image_url,
-                    :image_path,
-                    :image_height,
-                    :image_width,
-                    :image_aspect_ratio,
-                    :flags,
-                    :styling,
-                    :timestamp,
-                    :logo_url,
-                    :logo_path,
-                    :price_suggestion_amount,
-                    :price_suggestion_currency_code,
-                    :price_total_amount,
-                    :price_total_currency_code,
-                    :price_shared_cost_amount,
-                    :price_shared_cost_currency_code,
-                    :area_range_size_from,
-                    :area_range_size_to,
-                    :area_range_unit,
-                    :area_range_description,
-                    :area_plot_size,
-                    :area_plot_unit,
-                    :area_plot_description,
-                    :organisation_name,
-                    :local_area_name,
-                    :number_of_bedrooms,
-                    :owner_type_description,
-                    :property_type_description,
-                    :viewing_times,
-                    :coordinates_lat,
-                    :coordinates_lon,
-                    :image_urls,
-                    :ad_link,
-                    :area_size,
-                    :area_unit,
-                    :area_description,
-                    :price_range_suggestion_amount_from,
-                    :price_range_suggestion_amount_to,
-                    :price_range_suggestion_currency_code,
-                    :price_range_total_amount_from,
-                    :price_range_total_amount_to,
-                    :price_range_total_currency_code,
-                    :bedrooms_range_start,
-                    :bedrooms_range_end
-                )
-                """
-                ),
-                [vars(Doc(**utils.flattenDict(doc, mapper=lambda x: str(x)))) for doc in docs()],
-            )
-            conn.commit()
+    session: orm.Session
+    with orm.Session(engine) as session:
+        session.add_all(Doc(**utils.flattenDict(doc, mapper=str)) for doc in docs())
+        session.commit()
 
 
 if __name__ == "__main__":
@@ -217,5 +110,5 @@ if __name__ == "__main__":
     # requests_log.setLevel(logging.DEBUG)
 
     asyncio.run(obtainRawIndexData())
-    # storeIndexData()
+    storeIndexData()
     # docAnalyze()

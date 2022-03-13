@@ -1,7 +1,8 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 import sqlalchemy as sa
-from sqlalchemy import orm
+from sqlalchemy import orm, func
+import datetime
 
 mapper_registry = orm.registry()
 
@@ -28,6 +29,10 @@ class FinnResponse:
 class Doc:
     __table__ = sa.Table(
         "preview",
+        mapper_registry.metadata,
+        sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),
+        sa.Column("_created", sa.DateTime, server_default=func.now()),
+        sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),
         sa.Column("type", sa.UnicodeText),
         sa.Column("ad_id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),
@@ -78,6 +83,8 @@ class Doc:
         sa.Column("bedrooms_range_start", sa.Integer),
         sa.Column("bedrooms_range_end", sa.Integer),
     )
+    _id: int = field(init=False)
+    _last_updated: datetime.datetime = field(init=False)
     type: str = None
     ad_id: int = None
     main_search_key: str = None

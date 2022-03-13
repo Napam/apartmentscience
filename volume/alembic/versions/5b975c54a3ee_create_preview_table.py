@@ -21,8 +21,9 @@ def upgrade():
     # Comments represents field that 6are in response, but not used
     op.create_table(
         "preview",
-        sa.Column("_id", sa.Integer, autoincrement=True),
-        sa.Column("_last_updated", sa.DateTime, onupdate=datetime.datetime.now()),
+        sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),
+        sa.Column("_created", sa.DateTime, server_default=sa.func.now()),
+        sa.Column("_last_updated", sa.DateTime, onupdate=sa.func.now()),
         sa.Column("type", sa.UnicodeText),
         sa.Column("ad_id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),
