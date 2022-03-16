@@ -3,6 +3,8 @@ from typing import Any
 import sqlalchemy as sa
 from sqlalchemy import orm
 import datetime
+import config
+import pandas as pd
 
 mapper_registry = orm.registry()
 
@@ -27,7 +29,8 @@ class Test:
 
 
 if __name__ == "__main__":
-    engine = sa.create_engine("sqlite:///test.db", echo=True, future=True)
+    engine = sa.create_engine(config.SQL_ADDRESS, echo=False, future=True)
+    session: orm.Session
     with orm.Session(engine) as session:
         session.add_all(
             [
@@ -36,7 +39,14 @@ if __name__ == "__main__":
                 Test(_str="Test3", _int=3, _float=3),
             ]
         )
-        session.commit()
+
+    with orm.Session(engine) as session:
+        print(session.query(Test).all())
+
+    with engine.connect() as conn:
+        print(pd.read_sql(sa.text("SELECT * FROM preview"), con=conn))
+
+    # session.commit()
     # conn: sa.engine.Connection
     # with engine.connect() as conn:
 
