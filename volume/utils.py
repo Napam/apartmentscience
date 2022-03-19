@@ -1,6 +1,6 @@
 import json
 from types import FunctionType
-from typing import MutableMapping
+from typing import Any, Callable, Iterable, MutableMapping
 from pygments import highlight, lexers, formatters
 import datetime as dt
 import config
@@ -42,6 +42,10 @@ def docs(flatten: bool = True):
             docs: list[dict] = json.load(f)["docs"]
             for doc in docs:
                 yield flattenDict(doc) if flatten else doc
+
+
+def findFirst(x: Iterable[Any], predicate: Callable[[Any], bool]) -> Any | None:
+    return next((item for item in x if predicate(item)), None)
 
 
 if __name__ == "__main__":

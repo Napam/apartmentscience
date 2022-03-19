@@ -51,7 +51,7 @@ st.pydeck_chart(
             )
         ],
         initial_view_state=view,
-        tooltip={"html": "<div>Price: {price_suggestion_amount}</div>"},
+        tooltip={"html": "<div>Price suggestion: {price_suggestion_amount}</div>"},
         map_provider="mapbox",
     )
 )

@@ -5,7 +5,7 @@ WORKDIR /project
 RUN apt-get update && apt-get install -y \
     chromium-driver \
     iputils-ping \
-    screen \
+    tmux \
     sqlite3 \
     vim \
 && apt-get -y autoremove && rm -rf /var/lib/apt/lists/*

@@ -8,6 +8,19 @@ mapper_registry = orm.registry()
 
 
 @dataclass
+class FinnLocationFilter:
+    display_name: str
+    name: str
+    value: str
+    hits: int
+    filter_items: list["FinnLocationFilter"]
+    selected: bool
+
+    def getQueryParams(self) -> dict:
+        return {"location": self.value}
+
+
+@dataclass
 class Paging:
     param: str
     current: float

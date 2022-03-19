@@ -1,0 +1,3602 @@
+[
+    {
+        "display_name": "Agder",
+        "name": "location",
+        "value": "0.22042",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Arendal",
+                "name": "location",
+                "value": "1.22042.20166",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Birkenes",
+                "name": "location",
+                "value": "1.22042.20172",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bygland",
+                "name": "location",
+                "value": "1.22042.20176",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bykle",
+                "name": "location",
+                "value": "1.22042.20178",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Evje og Hornnes",
+                "name": "location",
+                "value": "1.22042.20175",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Farsund",
+                "name": "location",
+                "value": "1.22042.20181",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Flekkefjord",
+                "name": "location",
+                "value": "1.22042.20182",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Froland",
+                "name": "location",
+                "value": "1.22042.20170",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gjerstad",
+                "name": "location",
+                "value": "1.22042.20167",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grimstad",
+                "name": "location",
+                "value": "1.22042.20165",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "H\u00e6gebostad",
+                "name": "location",
+                "value": "1.22042.20191",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Iveland",
+                "name": "location",
+                "value": "1.22042.20174",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kristiansand",
+                "name": "location",
+                "value": "1.22042.20179",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Kristiansand Nord",
+                        "name": "location",
+                        "value": "2.22042.20179.20707",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Kristiansand Sentrum",
+                        "name": "location",
+                        "value": "2.22042.20179.20536",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Kristiansand Vest",
+                        "name": "location",
+                        "value": "2.22042.20179.20709",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Kristiansand \u00d8st",
+                        "name": "location",
+                        "value": "2.22042.20179.20708",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Songdalen",
+                        "name": "location",
+                        "value": "2.22042.20179.20734",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "S\u00f8gne",
+                        "name": "location",
+                        "value": "2.22042.20179.20735",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Kvinesdal",
+                "name": "location",
+                "value": "1.22042.20192",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lillesand",
+                "name": "location",
+                "value": "1.22042.20171",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lindesnes",
+                "name": "location",
+                "value": "1.22042.20189",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lyngdal",
+                "name": "location",
+                "value": "1.22042.20190",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ris\u00f8r",
+                "name": "location",
+                "value": "1.22042.20164",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sirdal",
+                "name": "location",
+                "value": "1.22042.20193",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tvedestrand",
+                "name": "location",
+                "value": "1.22042.20169",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Valle",
+                "name": "location",
+                "value": "1.22042.20177",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Veg\u00e5rshei",
+                "name": "location",
+                "value": "1.22042.20168",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vennesla",
+                "name": "location",
+                "value": "1.22042.20183",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5mli",
+                "name": "location",
+                "value": "1.22042.20173",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5seral",
+                "name": "location",
+                "value": "1.22042.20187",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Innlandet",
+        "name": "location",
+        "value": "0.22034",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Alvdal",
+                "name": "location",
+                "value": "1.22034.20081",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Dovre",
+                "name": "location",
+                "value": "1.22034.20086",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Eidskog",
+                "name": "location",
+                "value": "1.22034.20069",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Elverum",
+                "name": "location",
+                "value": "1.22034.20073",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Engerdal",
+                "name": "location",
+                "value": "1.22034.20078",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Etnedal",
+                "name": "location",
+                "value": "1.22034.20105",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gausdal",
+                "name": "location",
+                "value": "1.22034.20096",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gj\u00f8vik",
+                "name": "location",
+                "value": "1.22034.20085",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gran",
+                "name": "location",
+                "value": "1.22034.20101",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grue",
+                "name": "location",
+                "value": "1.22034.20070",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hamar",
+                "name": "location",
+                "value": "1.22034.20063",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kongsvinger",
+                "name": "location",
+                "value": "1.22034.20062",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lesja",
+                "name": "location",
+                "value": "1.22034.20087",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lillehammer",
+                "name": "location",
+                "value": "1.22034.20084",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lom",
+                "name": "location",
+                "value": "1.22034.20089",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "L\u00f8ten",
+                "name": "location",
+                "value": "1.22034.20065",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nord-Aurdal",
+                "name": "location",
+                "value": "1.22034.20106",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nord-Fron",
+                "name": "location",
+                "value": "1.22034.20091",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nord-Odal",
+                "name": "location",
+                "value": "1.22034.20067",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nordre Land",
+                "name": "location",
+                "value": "1.22034.20103",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Os (Innlandet)",
+                "name": "location",
+                "value": "1.22034.20083",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rendalen",
+                "name": "location",
+                "value": "1.22034.20077",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ringebu",
+                "name": "location",
+                "value": "1.22034.20094",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ringsaker",
+                "name": "location",
+                "value": "1.22034.20064",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sel",
+                "name": "location",
+                "value": "1.22034.20092",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Skj\u00e5k",
+                "name": "location",
+                "value": "1.22034.20088",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stange",
+                "name": "location",
+                "value": "1.22034.20066",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stor-Elvdal",
+                "name": "location",
+                "value": "1.22034.20076",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8ndre Land",
+                "name": "location",
+                "value": "1.22034.20102",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8r-Aurdal",
+                "name": "location",
+                "value": "1.22034.20104",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8r-Fron",
+                "name": "location",
+                "value": "1.22034.20093",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8r-Odal",
+                "name": "location",
+                "value": "1.22034.20068",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tolga",
+                "name": "location",
+                "value": "1.22034.20079",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Trysil",
+                "name": "location",
+                "value": "1.22034.20074",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tynset",
+                "name": "location",
+                "value": "1.22034.20080",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vang",
+                "name": "location",
+                "value": "1.22034.20109",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vestre Slidre",
+                "name": "location",
+                "value": "1.22034.20107",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vestre Toten",
+                "name": "location",
+                "value": "1.22034.20098",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "V\u00e5g\u00e5",
+                "name": "location",
+                "value": "1.22034.20090",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "V\u00e5ler (Innlandet)",
+                "name": "location",
+                "value": "1.22034.20072",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5mot",
+                "name": "location",
+                "value": "1.22034.20075",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5snes",
+                "name": "location",
+                "value": "1.22034.20071",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8stre Toten",
+                "name": "location",
+                "value": "1.22034.20097",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8yer",
+                "name": "location",
+                "value": "1.22034.20095",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8ystre Slidre",
+                "name": "location",
+                "value": "1.22034.20108",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "M\u00f8re og Romsdal",
+        "name": "location",
+        "value": "0.20015",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Aukra",
+                "name": "location",
+                "value": "1.20015.20304",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Aure",
+                "name": "location",
+                "value": "1.20015.20314",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Aver\u00f8y",
+                "name": "location",
+                "value": "1.20015.20307",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fjord",
+                "name": "location",
+                "value": "1.20015.22101",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Giske",
+                "name": "location",
+                "value": "1.20015.20297",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gjemnes",
+                "name": "location",
+                "value": "1.20015.20309",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hareid",
+                "name": "location",
+                "value": "1.20015.20287",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Her\u00f8y (M.R.)",
+                "name": "location",
+                "value": "1.20015.20285",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hustadvika",
+                "name": "location",
+                "value": "1.20015.22102",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kristiansund",
+                "name": "location",
+                "value": "1.20015.20281",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Molde",
+                "name": "location",
+                "value": "1.20015.20280",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rauma",
+                "name": "location",
+                "value": "1.20015.20300",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sande (M.R.)",
+                "name": "location",
+                "value": "1.20015.20284",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sm\u00f8la",
+                "name": "location",
+                "value": "1.20015.20317",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stranda",
+                "name": "location",
+                "value": "1.20015.20292",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sula",
+                "name": "location",
+                "value": "1.20015.20296",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sunndal",
+                "name": "location",
+                "value": "1.20015.20311",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Surnadal",
+                "name": "location",
+                "value": "1.20015.20312",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sykkylven",
+                "name": "location",
+                "value": "1.20015.20294",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tingvoll",
+                "name": "location",
+                "value": "1.20015.20310",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ulstein",
+                "name": "location",
+                "value": "1.20015.20286",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vanylven",
+                "name": "location",
+                "value": "1.20015.20283",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vestnes",
+                "name": "location",
+                "value": "1.20015.20299",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Volda",
+                "name": "location",
+                "value": "1.20015.20288",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5lesund",
+                "name": "location",
+                "value": "1.20015.20282",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Gamle \u00c5lesund",
+                        "name": "location",
+                        "value": "2.20015.20282.23001",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Haram",
+                        "name": "location",
+                        "value": "2.20015.20282.23004",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Skodje",
+                        "name": "location",
+                        "value": "2.20015.20282.23003",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "\u00d8rskog",
+                        "name": "location",
+                        "value": "2.20015.20282.23002",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8rsta",
+                "name": "location",
+                "value": "1.20015.20289",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Nordland",
+        "name": "location",
+        "value": "0.20018",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Alstahaug",
+                "name": "location",
+                "value": "1.20018.20375",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "And\u00f8y",
+                "name": "location",
+                "value": "1.20018.20410",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Beiarn",
+                "name": "location",
+                "value": "1.20018.20389",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bindal",
+                "name": "location",
+                "value": "1.20018.20369",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bod\u00f8",
+                "name": "location",
+                "value": "1.20018.20367",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Br\u00f8nn\u00f8y",
+                "name": "location",
+                "value": "1.20018.20371",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "B\u00f8 (Nordland)",
+                "name": "location",
+                "value": "1.20018.20407",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "D\u00f8nna",
+                "name": "location",
+                "value": "1.20018.20380",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Evenes",
+                "name": "location",
+                "value": "1.20018.20399",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fauske",
+                "name": "location",
+                "value": "1.20018.20391",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Flakstad",
+                "name": "location",
+                "value": "1.20018.20403",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gildesk\u00e5l",
+                "name": "location",
+                "value": "1.20018.20388",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grane",
+                "name": "location",
+                "value": "1.20018.20378",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hadsel",
+                "name": "location",
+                "value": "1.20018.20406",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hamar\u00f8y",
+                "name": "location",
+                "value": "1.20018.20395",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hattfjelldal",
+                "name": "location",
+                "value": "1.20018.20379",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hemnes",
+                "name": "location",
+                "value": "1.20018.20382",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Her\u00f8y (Nordland)",
+                "name": "location",
+                "value": "1.20018.20374",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Leirfjord",
+                "name": "location",
+                "value": "1.20018.20376",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lur\u00f8y",
+                "name": "location",
+                "value": "1.20018.20384",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "L\u00f8dingen",
+                "name": "location",
+                "value": "1.20018.20397",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Mel\u00f8y",
+                "name": "location",
+                "value": "1.20018.20387",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Narvik",
+                "name": "location",
+                "value": "1.20018.20368",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nesna",
+                "name": "location",
+                "value": "1.20018.20381",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rana",
+                "name": "location",
+                "value": "1.20018.20383",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00f8d\u00f8y",
+                "name": "location",
+                "value": "1.20018.20386",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00f8st",
+                "name": "location",
+                "value": "1.20018.20401",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Saltdal",
+                "name": "location",
+                "value": "1.20018.20390",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sortland",
+                "name": "location",
+                "value": "1.20018.20409",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Steigen",
+                "name": "location",
+                "value": "1.20018.20394",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8mna",
+                "name": "location",
+                "value": "1.20018.20370",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8rfold",
+                "name": "location",
+                "value": "1.20018.20393",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vefsn",
+                "name": "location",
+                "value": "1.20018.20377",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vega",
+                "name": "location",
+                "value": "1.20018.20372",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vestv\u00e5g\u00f8y",
+                "name": "location",
+                "value": "1.20018.20404",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vevelstad",
+                "name": "location",
+                "value": "1.20018.20373",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "V\u00e5gan",
+                "name": "location",
+                "value": "1.20018.20405",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "V\u00e6r\u00f8y",
+                "name": "location",
+                "value": "1.20018.20402",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8ksnes",
+                "name": "location",
+                "value": "1.20018.20408",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Oslo",
+        "name": "location",
+        "value": "0.20061",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Bjerke",
+                "name": "location",
+                "value": "1.20061.20528",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bygd\u00f8y - Frogner",
+                "name": "location",
+                "value": "1.20061.20507",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "B\u00f8ler",
+                "name": "location",
+                "value": "1.20061.20519",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ekeberg - Bekkelaget",
+                "name": "location",
+                "value": "1.20061.20515",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Furuset",
+                "name": "location",
+                "value": "1.20061.20524",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gamle Oslo",
+                "name": "location",
+                "value": "1.20061.20512",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grefsen - Kjels\u00e5s",
+                "name": "location",
+                "value": "1.20061.20529",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grorud",
+                "name": "location",
+                "value": "1.20061.20527",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gr\u00fcnerl\u00f8kka - Sofienberg",
+                "name": "location",
+                "value": "1.20061.20511",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hellerud",
+                "name": "location",
+                "value": "1.20061.20523",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Helsfyr - Sinsen",
+                "name": "location",
+                "value": "1.20061.20522",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lambertseter",
+                "name": "location",
+                "value": "1.20061.20518",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Manglerud",
+                "name": "location",
+                "value": "1.20061.20520",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nordstrand",
+                "name": "location",
+                "value": "1.20061.20516",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Roms\u00e5s",
+                "name": "location",
+                "value": "1.20061.20526",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00f8a",
+                "name": "location",
+                "value": "1.20061.20532",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sagene - Torshov",
+                "name": "location",
+                "value": "1.20061.20510",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sentrum",
+                "name": "location",
+                "value": "1.20061.20513",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sogn",
+                "name": "location",
+                "value": "1.20061.20530",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "St.Hanshaugen - Ullev\u00e5l",
+                "name": "location",
+                "value": "1.20061.20509",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stovner",
+                "name": "location",
+                "value": "1.20061.20525",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8ndre Nordstrand",
+                "name": "location",
+                "value": "1.20061.20517",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ullern",
+                "name": "location",
+                "value": "1.20061.20533",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Uranienborg - Majorstuen",
+                "name": "location",
+                "value": "1.20061.20508",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vinderen",
+                "name": "location",
+                "value": "1.20061.20531",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8stensj\u00f8",
+                "name": "location",
+                "value": "1.20061.20521",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Rogaland",
+        "name": "location",
+        "value": "0.20012",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Bjerkreim",
+                "name": "location",
+                "value": "1.20012.20200",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bokn",
+                "name": "location",
+                "value": "1.20012.20215",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Eigersund",
+                "name": "location",
+                "value": "1.20012.20194",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gjesdal",
+                "name": "location",
+                "value": "1.20012.20204",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Haugesund",
+                "name": "location",
+                "value": "1.20012.20197",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hjelmeland",
+                "name": "location",
+                "value": "1.20012.20209",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "H\u00e5",
+                "name": "location",
+                "value": "1.20012.20201",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Karm\u00f8y",
+                "name": "location",
+                "value": "1.20012.20217",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Klepp",
+                "name": "location",
+                "value": "1.20012.20202",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kvits\u00f8y",
+                "name": "location",
+                "value": "1.20012.20214",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lund",
+                "name": "location",
+                "value": "1.20012.20199",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Randaberg",
+                "name": "location",
+                "value": "1.20012.20206",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sandnes",
+                "name": "location",
+                "value": "1.20012.20195",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sauda",
+                "name": "location",
+                "value": "1.20012.20211",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sokndal",
+                "name": "location",
+                "value": "1.20012.20198",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sola",
+                "name": "location",
+                "value": "1.20012.20205",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stavanger",
+                "name": "location",
+                "value": "1.20012.20196",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Bjergsted/Byhaugen/ Kalh/Kampen",
+                        "name": "location",
+                        "value": "2.20012.20196.20714",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "By\u00f8yer",
+                        "name": "location",
+                        "value": "2.20012.20196.20715",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Eiganes/Stokka/Sandal",
+                        "name": "location",
+                        "value": "2.20012.20196.20716",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Finn\u00f8y",
+                        "name": "location",
+                        "value": "2.20012.20196.20733",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Forus/Godeset",
+                        "name": "location",
+                        "value": "2.20012.20196.20718",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Gausel",
+                        "name": "location",
+                        "value": "2.20012.20196.20719",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Hinna",
+                        "name": "location",
+                        "value": "2.20012.20196.20720",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Hundv\u00e5g/By\u00f8yer",
+                        "name": "location",
+                        "value": "2.20012.20196.20721",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Kvernevik",
+                        "name": "location",
+                        "value": "2.20012.20196.20722",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Madlamark/Gosen/Granneslia",
+                        "name": "location",
+                        "value": "2.20012.20196.20723",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Madlasandnes/Hafrsfjord/Sunde",
+                        "name": "location",
+                        "value": "2.20012.20196.20724",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Rennes\u00f8y",
+                        "name": "location",
+                        "value": "2.20012.20196.20732",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Stavanger Sentrum/Vestre plat\u00e5",
+                        "name": "location",
+                        "value": "2.20012.20196.20712",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Stavanger \u00d8st",
+                        "name": "location",
+                        "value": "2.20012.20196.20713",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Storhaug vest",
+                        "name": "location",
+                        "value": "2.20012.20196.20725",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Tasta/Vardenes/ Dusavik",
+                        "name": "location",
+                        "value": "2.20012.20196.20726",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Tjensvoll/Ullandhaug",
+                        "name": "location",
+                        "value": "2.20012.20196.20727",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Vaulen",
+                        "name": "location",
+                        "value": "2.20012.20196.20728",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "V\u00e5land/Bekkefaret",
+                        "name": "location",
+                        "value": "2.20012.20196.20729",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "\u00c5sen/Hillev\u00e5g/Auglend",
+                        "name": "location",
+                        "value": "2.20012.20196.20730",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Strand",
+                "name": "location",
+                "value": "1.20012.20208",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Suldal",
+                "name": "location",
+                "value": "1.20012.20210",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Time",
+                "name": "location",
+                "value": "1.20012.20203",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tysv\u00e6r",
+                "name": "location",
+                "value": "1.20012.20216",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Utsira",
+                "name": "location",
+                "value": "1.20012.20218",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vindafjord",
+                "name": "location",
+                "value": "1.20012.20219",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Svalbard",
+        "name": "location",
+        "value": "0.20506",
+        "hits": 0,
+        "filter_items": [],
+        "selected": false
+    },
+    {
+        "display_name": "Troms og Finnmark",
+        "name": "location",
+        "value": "0.22054",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Alta",
+                "name": "location",
+                "value": "1.22054.20441",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Balsfjord",
+                "name": "location",
+                "value": "1.22054.20429",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bardu",
+                "name": "location",
+                "value": "1.22054.20420",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "B\u00e5tsfjord",
+                "name": "location",
+                "value": "1.22054.20454",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Dyr\u00f8y",
+                "name": "location",
+                "value": "1.22054.20424",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gamvik",
+                "name": "location",
+                "value": "1.22054.20450",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gratangen",
+                "name": "location",
+                "value": "1.22054.20418",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hammerfest",
+                "name": "location",
+                "value": "1.22054.20439",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Harstad",
+                "name": "location",
+                "value": "1.22054.20412",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ibestad",
+                "name": "location",
+                "value": "1.22054.20417",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Karasjok",
+                "name": "location",
+                "value": "1.22054.20448",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Karls\u00f8y",
+                "name": "location",
+                "value": "1.22054.20430",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kautokeino",
+                "name": "location",
+                "value": "1.22054.20440",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kv\u00e6fjord",
+                "name": "location",
+                "value": "1.22054.20414",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kv\u00e6nangen",
+                "name": "location",
+                "value": "1.22054.20436",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "K\u00e5fjord",
+                "name": "location",
+                "value": "1.22054.20433",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lavangen",
+                "name": "location",
+                "value": "1.22054.20419",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lebesby",
+                "name": "location",
+                "value": "1.22054.20449",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Loppa",
+                "name": "location",
+                "value": "1.22054.20442",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lyngen",
+                "name": "location",
+                "value": "1.22054.20431",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "M\u00e5lselv",
+                "name": "location",
+                "value": "1.22054.20422",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "M\u00e5s\u00f8y",
+                "name": "location",
+                "value": "1.22054.20445",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nesseby",
+                "name": "location",
+                "value": "1.22054.20453",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nordkapp",
+                "name": "location",
+                "value": "1.22054.20446",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nordreisa",
+                "name": "location",
+                "value": "1.22054.20435",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Porsanger",
+                "name": "location",
+                "value": "1.22054.20447",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Salangen",
+                "name": "location",
+                "value": "1.22054.20421",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Senja",
+                "name": "location",
+                "value": "1.22054.22115",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Storfjord",
+                "name": "location",
+                "value": "1.22054.20432",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8r-Varanger",
+                "name": "location",
+                "value": "1.22054.20455",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "S\u00f8rreisa",
+                "name": "location",
+                "value": "1.22054.20423",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tana",
+                "name": "location",
+                "value": "1.22054.20452",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tjeldsund",
+                "name": "location",
+                "value": "1.22054.20398",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Troms\u00f8",
+                "name": "location",
+                "value": "1.22054.20413",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Kval\u00f8ya",
+                        "name": "location",
+                        "value": "2.22054.20413.20815",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Tromsdalen/Tomasjord/Kroken/Ramfjord",
+                        "name": "location",
+                        "value": "2.22054.20413.20814",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Troms\u00f8ya, Midten",
+                        "name": "location",
+                        "value": "2.22054.20413.20817",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Troms\u00f8ya, Nord",
+                        "name": "location",
+                        "value": "2.22054.20413.20816",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Troms\u00f8ya, S\u00f8r",
+                        "name": "location",
+                        "value": "2.22054.20413.20818",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Vads\u00f8",
+                "name": "location",
+                "value": "1.22054.20438",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vard\u00f8",
+                "name": "location",
+                "value": "1.22054.20437",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Tr\u00f8ndelag",
+        "name": "location",
+        "value": "0.20016",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Flatanger",
+                "name": "location",
+                "value": "1.20016.20363",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Frosta",
+                "name": "location",
+                "value": "1.20016.20347",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fr\u00f8ya",
+                "name": "location",
+                "value": "1.20016.20322",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Grong",
+                "name": "location",
+                "value": "1.20016.20359",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Heim",
+                "name": "location",
+                "value": "1.20016.22112",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hitra",
+                "name": "location",
+                "value": "1.20016.20321",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Holt\u00e5len",
+                "name": "location",
+                "value": "1.20016.20335",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Inder\u00f8y",
+                "name": "location",
+                "value": "1.20016.20354",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Indre Fosen",
+                "name": "location",
+                "value": "1.20016.20325",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Levanger",
+                "name": "location",
+                "value": "1.20016.20349",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lierne",
+                "name": "location",
+                "value": "1.20016.20356",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Malvik",
+                "name": "location",
+                "value": "1.20016.20340",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Melhus",
+                "name": "location",
+                "value": "1.20016.20337",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Mer\u00e5ker",
+                "name": "location",
+                "value": "1.20016.20345",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Midtre Gauldal",
+                "name": "location",
+                "value": "1.20016.20336",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Namsos",
+                "name": "location",
+                "value": "1.20016.20344",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "N\u00e6r\u00f8ysund",
+                "name": "location",
+                "value": "1.20016.22114",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Oppdal",
+                "name": "location",
+                "value": "1.20016.20330",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Orkland",
+                "name": "location",
+                "value": "1.20016.22113",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Osen",
+                "name": "location",
+                "value": "1.20016.20329",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Overhalla",
+                "name": "location",
+                "value": "1.20016.20361",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rennebu",
+                "name": "location",
+                "value": "1.20016.20331",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rindal",
+                "name": "location",
+                "value": "1.20016.20313",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00f8ros",
+                "name": "location",
+                "value": "1.20016.20334",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Selbu",
+                "name": "location",
+                "value": "1.20016.20341",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Skaun",
+                "name": "location",
+                "value": "1.20016.20338",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sn\u00e5sa",
+                "name": "location",
+                "value": "1.20016.20355",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Steinkjer",
+                "name": "location",
+                "value": "1.20016.20343",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stj\u00f8rdal",
+                "name": "location",
+                "value": "1.20016.20346",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Trondheim",
+                "name": "location",
+                "value": "1.20016.20318",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Kl\u00e6bu",
+                        "name": "location",
+                        "value": "2.20016.20318.20731",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Trondheim Sentrum",
+                        "name": "location",
+                        "value": "2.20016.20318.20505",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Trondheim S\u00f8r",
+                        "name": "location",
+                        "value": "2.20016.20318.20502",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Trondheim Vest",
+                        "name": "location",
+                        "value": "2.20016.20318.20501",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Trondheim \u00d8st",
+                        "name": "location",
+                        "value": "2.20016.20318.20504",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Tydal",
+                "name": "location",
+                "value": "1.20016.20342",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Verdal",
+                "name": "location",
+                "value": "1.20016.20350",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5fjord",
+                "name": "location",
+                "value": "1.20016.20327",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8rland",
+                "name": "location",
+                "value": "1.20016.20323",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Vestfold og Telemark",
+        "name": "location",
+        "value": "0.22038",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Bamble",
+                "name": "location",
+                "value": "1.22038.20150",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Drangedal",
+                "name": "location",
+                "value": "1.22038.20152",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fyresdal",
+                "name": "location",
+                "value": "1.22038.20161",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "F\u00e6rder",
+                "name": "location",
+                "value": "1.22038.20143",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Holmestrand",
+                "name": "location",
+                "value": "1.22038.20132",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Horten",
+                "name": "location",
+                "value": "1.22038.20131",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Krager\u00f8",
+                "name": "location",
+                "value": "1.22038.20151",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kviteseid",
+                "name": "location",
+                "value": "1.22038.20159",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Larvik",
+                "name": "location",
+                "value": "1.22038.20135",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Midt-Telemark",
+                "name": "location",
+                "value": "1.22038.22106",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nissedal",
+                "name": "location",
+                "value": "1.22038.20160",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nome",
+                "name": "location",
+                "value": "1.22038.20153",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Notodden",
+                "name": "location",
+                "value": "1.22038.20148",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Porsgrunn",
+                "name": "location",
+                "value": "1.22038.20146",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sandefjord",
+                "name": "location",
+                "value": "1.22038.20134",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Seljord",
+                "name": "location",
+                "value": "1.22038.20158",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Siljan",
+                "name": "location",
+                "value": "1.22038.20149",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Skien",
+                "name": "location",
+                "value": "1.22038.20147",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tinn",
+                "name": "location",
+                "value": "1.22038.20156",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tokke",
+                "name": "location",
+                "value": "1.22038.20162",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "T\u00f8nsberg",
+                "name": "location",
+                "value": "1.22038.20133",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vinje",
+                "name": "location",
+                "value": "1.22038.20163",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    },
+    {
+        "display_name": "Vestland",
+        "name": "location",
+        "value": "0.22046",
+        "hits": 289,
+        "filter_items": [
+            {
+                "display_name": "Alver",
+                "name": "location",
+                "value": "1.22046.22109",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Lind\u00e5s",
+                        "name": "location",
+                        "value": "2.22046.22109.23026",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Meland",
+                        "name": "location",
+                        "value": "2.22046.22109.23024",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Rad\u00f8y",
+                        "name": "location",
+                        "value": "2.22046.22109.23025",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Askvoll",
+                "name": "location",
+                "value": "1.22046.20267",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ask\u00f8y",
+                "name": "location",
+                "value": "1.22046.20243",
+                "hits": 38,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Aurland",
+                "name": "location",
+                "value": "1.22046.20263",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Austevoll",
+                "name": "location",
+                "value": "1.22046.20240",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Austrheim",
+                "name": "location",
+                "value": "1.22046.20251",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bergen",
+                "name": "location",
+                "value": "1.22046.20220",
+                "hits": 251,
+                "filter_items": [
+                    {
+                        "display_name": "Arna",
+                        "name": "location",
+                        "value": "2.22046.20220.20537",
+                        "hits": 6,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Bergen Sentrum",
+                        "name": "location",
+                        "value": "2.22046.20220.20465",
+                        "hits": 131,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Bergen Vest",
+                        "name": "location",
+                        "value": "2.22046.20220.20479",
+                        "hits": 33,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Fana",
+                        "name": "location",
+                        "value": "2.22046.20220.20473",
+                        "hits": 28,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Fyllingsdalen",
+                        "name": "location",
+                        "value": "2.22046.20220.20475",
+                        "hits": 23,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Land\u00e5s",
+                        "name": "location",
+                        "value": "2.22046.20220.20471",
+                        "hits": 16,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "\u00c5sane",
+                        "name": "location",
+                        "value": "2.22046.20220.20470",
+                        "hits": 14,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": true
+            },
+            {
+                "display_name": "Bj\u00f8rnafjorden",
+                "name": "location",
+                "value": "1.22046.22108",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Bremanger",
+                "name": "location",
+                "value": "1.22046.20273",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "B\u00f8mlo",
+                "name": "location",
+                "value": "1.22046.20224",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Eidfjord",
+                "name": "location",
+                "value": "1.22046.20232",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Etne",
+                "name": "location",
+                "value": "1.22046.20221",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fitjar",
+                "name": "location",
+                "value": "1.22046.20226",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fjaler",
+                "name": "location",
+                "value": "1.22046.20268",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gloppen",
+                "name": "location",
+                "value": "1.22046.20278",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gulen",
+                "name": "location",
+                "value": "1.22046.20255",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hyllestad",
+                "name": "location",
+                "value": "1.22046.20257",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "H\u00f8yanger",
+                "name": "location",
+                "value": "1.22046.20258",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kinn",
+                "name": "location",
+                "value": "1.22046.22107",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Flora",
+                        "name": "location",
+                        "value": "2.22046.22107.23022",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "V\u00e5gs\u00f8y",
+                        "name": "location",
+                        "value": "2.22046.22107.23023",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Kvam",
+                "name": "location",
+                "value": "1.22046.20236",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kvinnherad",
+                "name": "location",
+                "value": "1.22046.20228",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Luster",
+                "name": "location",
+                "value": "1.22046.20266",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "L\u00e6rdal",
+                "name": "location",
+                "value": "1.22046.20264",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Masfjorden",
+                "name": "location",
+                "value": "1.22046.20253",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Oster\u00f8y",
+                "name": "location",
+                "value": "1.22046.20246",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Samnanger",
+                "name": "location",
+                "value": "1.22046.20238",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sogndal",
+                "name": "location",
+                "value": "1.22046.20262",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Solund",
+                "name": "location",
+                "value": "1.22046.20256",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stad",
+                "name": "location",
+                "value": "1.22046.22111",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stord",
+                "name": "location",
+                "value": "1.22046.20225",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Stryn",
+                "name": "location",
+                "value": "1.22046.20279",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sunnfjord",
+                "name": "location",
+                "value": "1.22046.22110",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sveio",
+                "name": "location",
+                "value": "1.22046.20223",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Tysnes",
+                "name": "location",
+                "value": "1.22046.20227",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ullensvang",
+                "name": "location",
+                "value": "1.22046.20231",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ulvik",
+                "name": "location",
+                "value": "1.22046.20233",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vaksdal",
+                "name": "location",
+                "value": "1.22046.20244",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vik",
+                "name": "location",
+                "value": "1.22046.20259",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Voss",
+                "name": "location",
+                "value": "1.22046.20235",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5rdal",
+                "name": "location",
+                "value": "1.22046.20265",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8ygarden",
+                "name": "location",
+                "value": "1.22046.20248",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": true
+    },
+    {
+        "display_name": "Viken",
+        "name": "location",
+        "value": "0.22030",
+        "hits": 0,
+        "filter_items": [
+            {
+                "display_name": "Aremark",
+                "name": "location",
+                "value": "1.22030.20026",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Asker",
+                "name": "location",
+                "value": "1.22030.20046",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Gamle Asker",
+                        "name": "location",
+                        "value": "2.22030.20046.23016",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Hurum",
+                        "name": "location",
+                        "value": "2.22030.20046.23018",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "R\u00f8yken",
+                        "name": "location",
+                        "value": "2.22030.20046.23017",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Aurskog-H\u00f8land",
+                "name": "location",
+                "value": "1.22030.20047",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "B\u00e6rum",
+                "name": "location",
+                "value": "1.22030.20045",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Drammen",
+                "name": "location",
+                "value": "1.22030.20110",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Gamle Drammen",
+                        "name": "location",
+                        "value": "2.22030.20110.23006",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Nedre Eiker",
+                        "name": "location",
+                        "value": "2.22030.20110.23007",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Svelvik",
+                        "name": "location",
+                        "value": "2.22030.20110.23008",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Eidsvoll",
+                "name": "location",
+                "value": "1.22030.20058",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Enebakk",
+                "name": "location",
+                "value": "1.22030.20051",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Flesberg",
+                "name": "location",
+                "value": "1.22030.20128",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fl\u00e5",
+                "name": "location",
+                "value": "1.22030.20114",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Fredrikstad",
+                "name": "location",
+                "value": "1.22030.20024",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Frogn - Dr\u00f8bak",
+                "name": "location",
+                "value": "1.22030.20042",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gjerdrum",
+                "name": "location",
+                "value": "1.22030.20055",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Gol",
+                "name": "location",
+                "value": "1.22030.20116",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Halden",
+                "name": "location",
+                "value": "1.22030.20021",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hemsedal",
+                "name": "location",
+                "value": "1.22030.20117",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hol",
+                "name": "location",
+                "value": "1.22030.20119",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hole",
+                "name": "location",
+                "value": "1.22030.20113",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hurdal",
+                "name": "location",
+                "value": "1.22030.20060",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Hvaler",
+                "name": "location",
+                "value": "1.22030.20025",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Indre \u00d8stfold",
+                "name": "location",
+                "value": "1.22030.22103",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Askim",
+                        "name": "location",
+                        "value": "2.22030.22103.23011",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Eidsberg",
+                        "name": "location",
+                        "value": "2.22030.22103.23012",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Hob\u00f8l",
+                        "name": "location",
+                        "value": "2.22030.22103.23013",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Spydeberg",
+                        "name": "location",
+                        "value": "2.22030.22103.23010",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Tr\u00f8gstad",
+                        "name": "location",
+                        "value": "2.22030.22103.23009",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Jevnaker",
+                "name": "location",
+                "value": "1.22030.20099",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kongsberg",
+                "name": "location",
+                "value": "1.22030.20111",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Kr\u00f8dsherad",
+                "name": "location",
+                "value": "1.22030.20121",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lier",
+                "name": "location",
+                "value": "1.22030.20125",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Lillestr\u00f8m",
+                "name": "location",
+                "value": "1.22030.22105",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Fet",
+                        "name": "location",
+                        "value": "2.22030.22105.23020",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Skedsmo",
+                        "name": "location",
+                        "value": "2.22030.22105.23021",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "S\u00f8rum",
+                        "name": "location",
+                        "value": "2.22030.22105.23019",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Lunner",
+                "name": "location",
+                "value": "1.22030.20100",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "L\u00f8renskog",
+                "name": "location",
+                "value": "1.22030.20052",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Marker",
+                "name": "location",
+                "value": "1.22030.20027",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Modum",
+                "name": "location",
+                "value": "1.22030.20122",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Moss",
+                "name": "location",
+                "value": "1.22030.20022",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nannestad",
+                "name": "location",
+                "value": "1.22030.20059",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nes",
+                "name": "location",
+                "value": "1.22030.20057",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nesbyen",
+                "name": "location",
+                "value": "1.22030.20115",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nesodden",
+                "name": "location",
+                "value": "1.22030.20043",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nittedal",
+                "name": "location",
+                "value": "1.22030.20054",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Nordre Follo",
+                "name": "location",
+                "value": "1.22030.22104",
+                "hits": 0,
+                "filter_items": [
+                    {
+                        "display_name": "Oppeg\u00e5rd",
+                        "name": "location",
+                        "value": "2.22030.22104.23015",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    },
+                    {
+                        "display_name": "Ski",
+                        "name": "location",
+                        "value": "2.22030.22104.23014",
+                        "hits": 0,
+                        "filter_items": [],
+                        "selected": false
+                    }
+                ],
+                "selected": false
+            },
+            {
+                "display_name": "Nore og Uvdal",
+                "name": "location",
+                "value": "1.22030.20130",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Rakkestad",
+                "name": "location",
+                "value": "1.22030.20034",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ringerike",
+                "name": "location",
+                "value": "1.22030.20112",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00e5de",
+                "name": "location",
+                "value": "1.22030.20035",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "R\u00e6lingen",
+                "name": "location",
+                "value": "1.22030.20050",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sarpsborg",
+                "name": "location",
+                "value": "1.22030.20023",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Sigdal",
+                "name": "location",
+                "value": "1.22030.20120",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Skiptvet",
+                "name": "location",
+                "value": "1.22030.20033",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Ullensaker",
+                "name": "location",
+                "value": "1.22030.20056",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "Vestby",
+                "name": "location",
+                "value": "1.22030.20039",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "V\u00e5ler (Viken)",
+                "name": "location",
+                "value": "1.22030.20037",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5l",
+                "name": "location",
+                "value": "1.22030.20118",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00c5s",
+                "name": "location",
+                "value": "1.22030.20041",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            },
+            {
+                "display_name": "\u00d8vre Eiker",
+                "name": "location",
+                "value": "1.22030.20123",
+                "hits": 0,
+                "filter_items": [],
+                "selected": false
+            }
+        ],
+        "selected": false
+    }
+]
