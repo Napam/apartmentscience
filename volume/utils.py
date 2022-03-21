@@ -5,6 +5,7 @@ from pygments import highlight, lexers, formatters
 import datetime as dt
 import config
 import os
+import tqdm
 
 isoNow = lambda: dt.datetime.now().isoformat()
 
@@ -36,8 +37,8 @@ def flattenDict(
     return dict(_flatten_dict_gen(d, parent_key, sep, mapper))
 
 
-def docs(flatten: bool = True):
-    for file in os.listdir(config.TMP_DIR):
+def docs(flatten: bool = True, progress_bar: bool = False):
+    for file in tqdm.tqdm(os.listdir(config.TMP_DIR), disable=not progress_bar):
         with open(os.path.join(config.TMP_DIR, file), "r") as f:
             docs: list[dict] = json.load(f)["docs"]
             for doc in docs:

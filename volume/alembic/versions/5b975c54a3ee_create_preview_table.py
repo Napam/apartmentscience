@@ -24,6 +24,7 @@ def upgrade():
         sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),
         sa.Column("_created", sa.DateTime, server_default=sa.func.now()),
         sa.Column("_last_updated", sa.DateTime, onupdate=sa.func.now()),
+        sa.Column("_batch", sa.Integer),
         sa.Column("type", sa.UnicodeText),
         sa.Column("ad_id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),
@@ -62,9 +63,6 @@ def upgrade():
         sa.Column("coordinates_lon", sa.Float),
         sa.Column("image_urls", sa.UnicodeText),
         sa.Column("ad_link", sa.UnicodeText),
-        sa.Column("area_size", sa.Integer),
-        sa.Column("area_unit", sa.UnicodeText),
-        sa.Column("area_description", sa.UnicodeText),
         sa.Column("price_range_suggestion_amount_from", sa.Integer),
         sa.Column("price_range_suggestion_amount_to", sa.Integer),
         sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
@@ -73,6 +71,9 @@ def upgrade():
         sa.Column("price_range_total_currency_code", sa.UnicodeText),
         sa.Column("bedrooms_range_start", sa.Integer),
         sa.Column("bedrooms_range_end", sa.Integer),
+        sa.Column("area_size", sa.Integer),
+        sa.Column("area_unit", sa.UnicodeText),
+        sa.Column("area_description", sa.UnicodeText),
     )
 
 

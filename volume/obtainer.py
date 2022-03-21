@@ -123,7 +123,7 @@ async def obtainRawIndexData():
         )
 
         logger.info(
-            f"Now doing requests for filter ({i}/{len(filters)}): {filter_.display_name}, {filter_.value}"
+            f"Now doing requests for filter ({i + 1}/{len(filters)}): {filter_.display_name}, {filter_.value}"
         )
         await asyncio.gather(*taskGenerator(filter_, responseJson["metadata"]["paging"]["last"]))
     await session.close()
@@ -135,19 +135,21 @@ def storeIndexData():
     """
     session: orm.Session
     with orm.Session(engine) as session:
-        session.delete(Doc)
+        batchNr: int | None = session.query(sa.func.max(Doc._batch)).scalar()
+        if batchNr is None:
+            logger.info("Could not find max batchNr, start with batch number 0")
+            batchNr = 0
+        else:
+            batchNr += 1
+            logger.info(f"Inserting for batch number {batchNr}")
     with orm.Session(engine) as session:
-        session.add_all(Doc(**utils.flattenDict(doc, mapper=str)) for doc in utils.docs())
+        session.add_all(
+            Doc(_batch=batchNr, **utils.flattenDict(doc, mapper=str))
+            for doc in utils.docs(progress_bar=True)
+        )
         session.commit()
 
 
 if __name__ == "__main__":
-    # from http.client import HTTPConnection
-
-    # HTTPConnection.debuglevel = 1
-
-    # requests_log = logging.getLogger("requests.packages.urllib3")
-    # requests_log.setLevel(logging.DEBUG)
-
     # asyncio.run(obtainRawIndexData())
     storeIndexData()

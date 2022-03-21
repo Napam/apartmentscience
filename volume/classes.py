@@ -46,6 +46,7 @@ class Doc:
         sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),
         sa.Column("_created", sa.DateTime, server_default=func.now()),
         sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),
+        sa.Column("_batch", sa.Integer),
         sa.Column("type", sa.UnicodeText),
         sa.Column("ad_id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),
@@ -84,9 +85,6 @@ class Doc:
         sa.Column("coordinates_lon", sa.Float),
         sa.Column("image_urls", sa.UnicodeText),
         sa.Column("ad_link", sa.UnicodeText),
-        sa.Column("area_size", sa.Integer),
-        sa.Column("area_unit", sa.UnicodeText),
-        sa.Column("area_description", sa.UnicodeText),
         sa.Column("price_range_suggestion_amount_from", sa.Integer),
         sa.Column("price_range_suggestion_amount_to", sa.Integer),
         sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
@@ -95,9 +93,13 @@ class Doc:
         sa.Column("price_range_total_currency_code", sa.UnicodeText),
         sa.Column("bedrooms_range_start", sa.Integer),
         sa.Column("bedrooms_range_end", sa.Integer),
+        sa.Column("area_size", sa.Integer),
+        sa.Column("area_unit", sa.UnicodeText),
+        sa.Column("area_description", sa.UnicodeText),
     )
     _id: int = field(init=False)
     _last_updated: datetime.datetime = field(init=False)
+    _batch: int = None
     type: str = None
     ad_id: int = None
     main_search_key: str = None
@@ -136,9 +138,6 @@ class Doc:
     coordinates_lon: float | int = None
     image_urls: list = None
     ad_link: str = None
-    area_size: int = None
-    area_unit: str = None
-    area_description: str = None
     price_range_suggestion_amount_from: int = None
     price_range_suggestion_amount_to: int = None
     price_range_suggestion_currency_code: str = None
@@ -147,3 +146,6 @@ class Doc:
     price_range_total_currency_code: str = None
     bedrooms_range_start: int = None
     bedrooms_range_end: int = None
+    area_size: int = None
+    area_unit: str = None
+    area_description: str = None
