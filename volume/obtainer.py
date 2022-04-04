@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import utils
 import classes
@@ -5,7 +6,7 @@ import logging
 import os
 import shutil
 import random
-from classes import Doc, FinnLocationFilter
+from classes import Doc, FinnLocationFilter, PreviewMeta
 import sqlalchemy as sa
 from sqlalchemy import orm
 import asyncio
@@ -142,6 +143,11 @@ def storeIndexData():
         else:
             batchNr += 1
             logger.info(f"Inserting for batch number {batchNr}")
+
+    with orm.Session(engine) as session:
+        session.add(PreviewMeta(_batch=batchNr, batch_date=datetime.now()))
+        session.commit()
+
     with orm.Session(engine) as session:
         session.add_all(
             Doc(_batch=batchNr, **utils.flattenDict(doc, mapper=str))

@@ -39,6 +39,19 @@ class FinnResponse:
 
 @mapper_registry.mapped
 @dataclass
+class PreviewMeta:
+    __table__ = sa.Table(
+        "preview_meta",
+        mapper_registry.metadata,
+        sa.Column("_batch", sa.Integer, primary_key=True),
+        sa.Column("batch_date", sa.DateTime),
+    )
+    _batch: int
+    batch_date: datetime.datetime
+
+
+@mapper_registry.mapped
+@dataclass
 class Doc:
     __table__ = sa.Table(
         "preview",

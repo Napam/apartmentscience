@@ -15,7 +15,7 @@ def typeMapFromFlatDict():
 
 
 def flatTypeMapToPythonClassString(
-    typeMap: dict[str, set], name: str, tab: str = "    ", table: str | None = None
+    typeMap: dict[str, set], name: str, indent: str = "    ", table: str | None = None
 ):
     def extractTypeString(type_):
         if type_ is NoneType:
@@ -42,27 +42,29 @@ def flatTypeMapToPythonClassString(
     if table is not None:
         buffer.write(f"@mapper_registry.mapped\n")
         buffer.write(f"@dataclass\n")
-    buffer.write(f"class {name}:\n{tab}")
+    buffer.write(f"class {name}:\n{indent}")
 
     if table is not None:
         buffer.write("__table__ = sa.Table(\n")
-        buffer.write(f'{tab*2}"{table}",\n')
-        buffer.write(f"{tab*2}mapper_registry.metadata,\n")
-        buffer.write(f'{tab*2}sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),\n')
-        buffer.write(f'{tab*2}sa.Column("_created", sa.DateTime, server_default=func.now()),\n')
-        buffer.write(f'{tab*2}sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),\n')
-        buffer.write(f'{tab*2}sa.Column("_batch", sa.Integer),\n')
+        buffer.write(f'{indent*2}"{table}",\n')
+        buffer.write(f"{indent*2}mapper_registry.metadata,\n")
+        buffer.write(
+            f'{indent*2}sa.Column("_id", sa.Integer, autoincrement=True, primary_key=True),\n'
+        )
+        buffer.write(f'{indent*2}sa.Column("_created", sa.DateTime, server_default=func.now()),\n')
+        buffer.write(f'{indent*2}sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),\n')
+        buffer.write(f'{indent*2}sa.Column("_batch", sa.Integer),\n')
         for key, types in typeMap.items():
-            buffer.write(f'{tab*2}sa.Column("{key}", {extractSATypeString(types)}),\n')
-        buffer.write(f"{tab})\n")
-        buffer.write(f"{tab}_id: int = field(init=False)\n")
-        buffer.write(f"{tab}_last_updated: datetime.datetime = field(init=False)\n")
-        buffer.write(f"{tab}_batch: int = None\n{tab}")
+            buffer.write(f'{indent*2}sa.Column("{key}", {extractSATypeString(types)}),\n')
+        buffer.write(f"{indent})\n")
+        buffer.write(f"{indent}_id: int = field(init=False)\n")
+        buffer.write(f"{indent}_last_updated: datetime.datetime = field(init=False)\n")
+        buffer.write(f"{indent}_batch: int = None\n{indent}")
 
     for key, types in typeMap.items():
         buffer.write(f"{key}: ")
         buffer.write(f"{' | '.join(extractTypeString(t) for t in types)} = None")
-        buffer.write(f"\n{tab}")
+        buffer.write(f"\n{indent}")
     print(buffer.getvalue())
     buffer.close()
 

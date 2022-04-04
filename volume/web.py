@@ -105,7 +105,7 @@ with st.expander("Filters"):
     with col2:
         maxSize = st.number_input(
             "Maximum size",
-            min_value=int(minTotPrice),
+            min_value=int(minSize),
             max_value=int(df["size"].max()),
             value=int(df["size"].max()),
             step=int(df["size"].max()) // 1000,
@@ -151,8 +151,8 @@ d = pdk.Deck(
     tooltip={"html": tooltip_html},
     map_provider="mapbox",
 )
-st.pydeck_chart(d)
 d.deck_widget.on_click(lambda: print("Haha"))
+st.pydeck_chart(d)
 
 
 hide_streamlit_style = """
