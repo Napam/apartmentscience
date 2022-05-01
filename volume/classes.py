@@ -96,6 +96,7 @@ class Doc:
         sa.Column("viewing_times", sa.UnicodeText),
         sa.Column("coordinates_lat", sa.Float),
         sa.Column("coordinates_lon", sa.Float),
+        sa.Column("ad_type", sa.Integer),
         sa.Column("image_urls", sa.UnicodeText),
         sa.Column("ad_link", sa.UnicodeText),
         sa.Column("price_range_suggestion_amount_from", sa.Integer),
@@ -149,6 +150,7 @@ class Doc:
     viewing_times: list = None
     coordinates_lat: float | int = None
     coordinates_lon: float | int = None
+    ad_type: int = None
     image_urls: list = None
     ad_link: str = None
     price_range_suggestion_amount_from: int = None

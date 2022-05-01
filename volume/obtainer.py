@@ -145,15 +145,16 @@ def storeIndexData():
             logger.info(f"Inserting for batch number {batchNr}")
 
     with orm.Session(engine) as session:
-        session.add(PreviewMeta(_batch=batchNr, batch_date=datetime.now()))
-        session.commit()
-
-    with orm.Session(engine) as session:
-        session.add_all(
-            Doc(_batch=batchNr, **utils.flattenDict(doc, mapper=str))
-            for doc in utils.docs(progress_bar=True)
-        )
-        session.commit()
+        try:
+            session.add(PreviewMeta(_batch=batchNr, batch_date=datetime.now()))
+            session.add_all(
+                Doc(_batch=batchNr, **utils.flattenDict(doc, mapper=str))
+                for doc in utils.docs(progress_bar=True)
+            )
+            session.commit()
+        except TypeError as e:
+            if "unexpected keyword argument" in str(e):
+                logger.error(f"Got unexpected property in raw data: {e}")
 
 
 if __name__ == "__main__":
