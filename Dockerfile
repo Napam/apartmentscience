@@ -17,10 +17,5 @@ RUN pip install -r /tmp/requirements.txt
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
 ENV HOME=/project
-ARG user
-ARG uid
-ARG gid
-RUN groupadd -g $gid $user && \ 
-    useradd --shell /bin/bash -u $uid -g $gid $user
 
 CMD ["/bin/bash"]

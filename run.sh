@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-IMG_NAME=$(grep -oP "IMG_NAME = \K\w+" Makefile)
+IMG_NAME=$(awk '/IMG_NAME = [A-Za-z0-9]+/ {print $3}' ./Makefile)
 CONTAINER_NAME=${IMG_NAME}-cntr
 USER=$(whoami)
 DOCKER_FLAGS=""
@@ -12,7 +12,7 @@ error() {
 while getopts "dpu" option; do
     case $option in
         d) DOCKER_FLAGS+="-d ";;
-        p) DOCKER_FLAGS+="--publish 7000:7000 ";;
+        p) DOCKER_FLAGS+="--publish 8080:8080 ";;
         u) USER=${OPTARG};;
         *) error; exit;;
     esac
@@ -27,4 +27,7 @@ docker run ${DOCKER_FLAGS} \
     --hostname ${CONTAINER_NAME} \
     --user ${USER} \
     -v "$(pwd)/volume":/project \
+    -v /etc/passwd:/etc/passwd:ro \
+    -v /etc/group:/etc/group:ro \
+    -u `id -u`:`id -g` \
     --name ${CONTAINER_NAME} ${IMG_NAME} ${ARGS}

@@ -155,7 +155,7 @@ def app():
         tooltip={"html": tooltip_html},
         map_provider="mapbox",
     )
-    d.deck_widget.on_click(lambda: print("Haha"))
+
     st.pydeck_chart(d)
 
     d2 = pdk.Deck(
