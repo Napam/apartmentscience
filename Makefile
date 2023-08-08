@@ -1,13 +1,9 @@
-BUILD_CMD = docker build --network=host
-DOCKERFILE = Dockerfile
-IMG_NAME = apartmentscience
-
-USERNAME = $(shell whoami)
-USERID = $(shell id -u)
-GROUPID = $(shell id -g)
+CONTAINER_ENGINE ?= docker
+CONTAINER_FILE ?= Dockerfile
+build_cmd = $(CONTAINER_ENGINE) build --network=host
+img_name = apartmentscience
 
 default:
-	$(BUILD_CMD) -f $(DOCKERFILE) -t $(IMG_NAME) .
-
+	$(build_cmd) -f $(CONTAINER_FILE) -t $(img_name) .
 clean: 
-	docker image rm $(IMG_NAME)
+	$(CONTAINER_ENGINE) image rm $(img_name)

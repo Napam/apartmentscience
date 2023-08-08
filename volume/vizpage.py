@@ -158,22 +158,6 @@ def app():
 
     st.pydeck_chart(d)
 
-    d2 = pdk.Deck(
-        layers=[
-            pdk.Layer(
-                type="HeatmapLayer",
-                data=df_viz,
-                get_position=["lon", "lat"],
-                get_weight="elevation",
-                radius_pixels=20,
-            )
-        ],
-        initial_view_state=view,
-        tooltip={"html": tooltip_html},
-        map_provider="mapbox",
-    )
-    st.pydeck_chart(d2)
-
 
 if __name__ == "__main__":
     app()

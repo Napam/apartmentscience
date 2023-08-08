@@ -59,11 +59,11 @@ def flatTypeMapToPythonClassString(
         buffer.write(f"{indent})\n")
         buffer.write(f"{indent}_id: int = field(init=False)\n")
         buffer.write(f"{indent}_last_updated: datetime.datetime = field(init=False)\n")
-        buffer.write(f"{indent}_batch: int = None\n{indent}")
+        buffer.write(f"{indent}_batch: int | None = None\n{indent}")
 
     for key, types in typeMap.items():
         buffer.write(f"{key}: ")
-        buffer.write(f"{' | '.join(extractTypeString(t) for t in types)} = None")
+        buffer.write(f"{' | '.join(extractTypeString(t) for t in types)} | None = None")
         buffer.write(f"\n{indent}")
     print(buffer.getvalue())
     buffer.close()

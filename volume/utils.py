@@ -40,7 +40,12 @@ def flattenDict(
 def docs(flatten: bool = True, progress_bar: bool = False):
     for file in tqdm.tqdm(os.listdir(config.TMP_DIR), disable=not progress_bar):
         with open(os.path.join(config.TMP_DIR, file), "r") as f:
-            docs: list[dict] = json.load(f)["docs"]
+            try:
+                docs: list[dict] = json.load(f)["docs"]
+            except KeyError as e:
+                print("Error loading a json from tmp dir: " + file)
+                raise e
+    
             for doc in docs:
                 yield flattenDict(doc) if flatten else doc
 

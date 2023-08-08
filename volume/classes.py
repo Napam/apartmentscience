@@ -61,7 +61,7 @@ class Doc:
         sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),
         sa.Column("_batch", sa.Integer),
         sa.Column("type", sa.UnicodeText),
-        sa.Column("ad_id", sa.Integer),
+        sa.Column("id", sa.Integer),
         sa.Column("main_search_key", sa.UnicodeText),
         sa.Column("heading", sa.UnicodeText),
         sa.Column("location", sa.UnicodeText),
@@ -73,6 +73,8 @@ class Doc:
         sa.Column("flags", sa.UnicodeText),
         sa.Column("styling", sa.UnicodeText),
         sa.Column("timestamp", sa.Integer),
+        sa.Column("labels", sa.UnicodeText),
+        sa.Column("extras", sa.UnicodeText),
         sa.Column("logo_url", sa.UnicodeText),
         sa.Column("logo_path", sa.UnicodeText),
         sa.Column("price_suggestion_amount", sa.Integer),
@@ -98,7 +100,7 @@ class Doc:
         sa.Column("coordinates_lon", sa.Float),
         sa.Column("ad_type", sa.Integer),
         sa.Column("image_urls", sa.UnicodeText),
-        sa.Column("ad_link", sa.UnicodeText),
+        sa.Column("ad_id", sa.Integer),
         sa.Column("price_range_suggestion_amount_from", sa.Integer),
         sa.Column("price_range_suggestion_amount_to", sa.Integer),
         sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
@@ -110,57 +112,61 @@ class Doc:
         sa.Column("area_size", sa.Integer),
         sa.Column("area_unit", sa.UnicodeText),
         sa.Column("area_description", sa.UnicodeText),
+        sa.Column("furnished_state", sa.UnicodeText),
     )
     _id: int = field(init=False)
     _last_updated: datetime.datetime = field(init=False)
-    _batch: int = None
-    type: str = None
-    ad_id: int = None
-    main_search_key: str = None
-    heading: str = None
-    location: str = None
-    image_url: str = None
-    image_path: str = None
-    image_height: int = None
-    image_width: int = None
-    image_aspect_ratio: float | int = None
-    flags: list = None
-    styling: list = None
-    timestamp: int = None
-    logo_url: str = None
-    logo_path: str = None
-    price_suggestion_amount: int = None
-    price_suggestion_currency_code: str = None
-    price_total_amount: int = None
-    price_total_currency_code: str = None
-    price_shared_cost_amount: int = None
-    price_shared_cost_currency_code: str = None
-    area_range_size_from: None | int = None
-    area_range_size_to: None | int = None
-    area_range_unit: str = None
-    area_range_description: str = None
-    area_plot_size: int = None
-    area_plot_unit: str = None
-    area_plot_description: str = None
-    organisation_name: str = None
-    local_area_name: str = None
-    number_of_bedrooms: int = None
-    owner_type_description: str = None
-    property_type_description: str = None
-    viewing_times: list = None
-    coordinates_lat: float | int = None
-    coordinates_lon: float | int = None
-    ad_type: int = None
-    image_urls: list = None
-    ad_link: str = None
-    price_range_suggestion_amount_from: int = None
-    price_range_suggestion_amount_to: int = None
-    price_range_suggestion_currency_code: str = None
-    price_range_total_amount_from: None | int = None
-    price_range_total_amount_to: None | int = None
-    price_range_total_currency_code: str = None
-    bedrooms_range_start: int = None
-    bedrooms_range_end: int = None
-    area_size: int = None
-    area_unit: str = None
-    area_description: str = None
+    _batch: int | None = None
+    type: str | None = None
+    id: str | None = None
+    main_search_key: str | None = None
+    heading: str | None = None
+    location: str | None = None
+    image_url: str | None = None
+    image_path: str | None = None
+    image_height: int | None = None
+    image_width: int | None = None
+    image_aspect_ratio: float | int | None = None
+    flags: list | None = None
+    styling: list | None = None
+    timestamp: int | None = None
+    labels: list | None = None
+    extras: list | None = None
+    logo_url: str | None = None
+    logo_path: str | None = None
+    price_suggestion_amount: int | None = None
+    price_suggestion_currency_code: str | None = None
+    price_total_amount: int | None = None
+    price_total_currency_code: str | None = None
+    price_shared_cost_amount: int | None = None
+    price_shared_cost_currency_code: str | None = None
+    area_range_size_from: None | int | None = None
+    area_range_size_to: None | int | None = None
+    area_range_unit: str | None = None
+    area_range_description: str | None = None
+    area_plot_size: int | None = None
+    area_plot_unit: str | None = None
+    area_plot_description: str | None = None
+    organisation_name: str | None = None
+    local_area_name: str | None = None
+    number_of_bedrooms: int | None = None
+    owner_type_description: str | None = None
+    property_type_description: str | None = None
+    viewing_times: list | None = None
+    coordinates_lat: float | int | None = None
+    coordinates_lon: float | int | None = None
+    ad_type: int | None = None
+    image_urls: list | None = None
+    ad_id: int | None = None
+    price_range_suggestion_amount_from: int | None = None
+    price_range_suggestion_amount_to: int | None = None
+    price_range_suggestion_currency_code: str | None = None
+    price_range_total_amount_from: int | None = None
+    price_range_total_amount_to: int | None = None
+    price_range_total_currency_code: str | None = None
+    bedrooms_range_start: int | None = None
+    bedrooms_range_end: int | None = None
+    area_size: int | None = None
+    area_unit: str | None = None
+    area_description: str | None = None
+    furnished_state: str | None = None

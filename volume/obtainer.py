@@ -90,7 +90,7 @@ async def obtainRawIndexData():
     logger.info("Start obtainRawIndexData")
     clearTempdir()
     session = aiohttp.ClientSession()
-    responseJson = await getResponse(session, {"searchkey": "SEARCH_ID_REALESTATE_HOMES", "page": 1})
+    responseJson = await getResponse(session, {"searchkey": "SEARCH_ID_REALESTATE_HOMES", "vertical": "realestate"})
     logger.info(f"Sucessfully obtained first response for metadata")
     locationFilters = utils.findFirst(responseJson["filters"], lambda x: x["name"] == "location")
     locationFilters = locationFilters["filter_items"]
@@ -99,6 +99,7 @@ async def obtainRawIndexData():
         for i in range(2, numberOfPages + 1):
             params = {
                 "searchkey": "SEARCH_ID_REALESTATE_HOMES",
+                "vertical": "realestate",
                 "page": i,
                 **filter_.getQueryParams(),
             }
@@ -114,7 +115,7 @@ async def obtainRawIndexData():
     filters = tuple(filterGenerator(locationFilters, 1))
     logger.info(f"Distribute requests across {len(filters)} filters")
     for i, filter_ in enumerate(filters):
-        params = {"searchkey": "SEARCH_ID_REALESTATE_HOMES", "page": 1, **filter_.getQueryParams()}
+        params = {"searchkey": "SEARCH_ID_REALESTATE_HOMES", "vertical": "realestate", "page": 1, **filter_.getQueryParams()}
         responseJson = await getResponse(
             session, params, file=f"loc{filter_.display_name}_page1_{utils.isoNow()}.json"
         )

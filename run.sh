@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-IMG_NAME=$(awk '/IMG_NAME = [A-Za-z0-9]+/ {print $3}' ./Makefile)
+IMG_NAME=$(awk '/img_name = [A-Za-z0-9]+/ {print $3}' ./Makefile)
 CONTAINER_NAME=${IMG_NAME}-cntr
 USER=$(whoami)
 DOCKER_FLAGS=""
 ARGS=""
+CONTAINER_ENGINE=${CONTAINER_ENGINE:-docker}
 
 error() {
     echo "u do sumting wong"
@@ -21,7 +22,7 @@ done
 # $@ is an array or something, start at $OPTIND and rest
 ARGS+=${@:$OPTIND}
 
-docker run ${DOCKER_FLAGS} \
+${CONTAINER_ENGINE} run ${DOCKER_FLAGS} \
     -it \
     --rm \
     --hostname ${CONTAINER_NAME} \
