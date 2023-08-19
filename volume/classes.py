@@ -74,6 +74,7 @@ class Doc:
         sa.Column("styling", sa.UnicodeText),
         sa.Column("timestamp", sa.Integer),
         sa.Column("labels", sa.UnicodeText),
+        sa.Column("canonical_url", sa.UnicodeText),
         sa.Column("extras", sa.UnicodeText),
         sa.Column("logo_url", sa.UnicodeText),
         sa.Column("logo_path", sa.UnicodeText),
@@ -131,6 +132,7 @@ class Doc:
     styling: list | None = None
     timestamp: int | None = None
     labels: list | None = None
+    canonical_url: str | None = None
     extras: list | None = None
     logo_url: str | None = None
     logo_path: str | None = None
