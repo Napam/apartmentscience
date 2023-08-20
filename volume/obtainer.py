@@ -159,5 +159,5 @@ def storeIndexData():
 
 
 if __name__ == "__main__":
-    # asyncio.run(obtainRawIndexData())
+    asyncio.run(obtainRawIndexData())
     storeIndexData()

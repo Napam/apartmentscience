@@ -1,32 +1,28 @@
-from locale import DAY_2
 import streamlit as st
-import numpy as np
 import pandas as pd
 import sqlalchemy as sa
-import classes
 import config
-from sqlalchemy import orm
 import pydeck as pdk
 
 
-@st.experimental_singleton
+@st.cache_resource
 def getSqlEngine():
     return sa.create_engine(config.SQL_ADDRESS, echo=False, future=True)
 
 
-@st.experimental_memo
+@st.cache_data
 def querySqlData(query):
     engine = getSqlEngine()
     with engine.connect() as conn:
         return pd.read_sql(sa.text(query), con=conn)
 
 
-@st.experimental_memo
+@st.cache_data
 def getBatches():
     return querySqlData("SELECT _batch, batch_date FROM preview_meta ORDER BY batch_date DESC")
 
 
-@st.experimental_memo
+@st.cache_data
 def getMaxOf(column: str):
     return querySqlData(f"SELECT MAX({column}) FROM preview").values[0][0]
 
@@ -61,7 +57,7 @@ def getData(batch: int):
 
 
 def app():
-    st.markdown("# Visualisering av scrapet boligdata")
+    st.markdown("# Housing data 3D viz")
     batchData = getBatches()
     batchChoice = st.selectbox(
         "Select batch",
