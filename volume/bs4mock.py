@@ -1,12 +1,10 @@
 import json
-import requests
 from pprint import pprint
 import os
 from bs4 import BeautifulSoup, element
 import textUtils
 import re
 import string
-from enum import Enum
 
 dirpath = "data/apartmentscience/indexjsons/"
 files = os.listdir(dirpath)

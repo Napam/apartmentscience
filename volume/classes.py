@@ -61,7 +61,7 @@ class Doc:
         sa.Column("_last_updated", sa.DateTime, onupdate=func.now()),
         sa.Column("_batch", sa.Integer),
         sa.Column("type", sa.UnicodeText),
-        sa.Column("id", sa.Integer),
+        sa.Column("id", sa.UnicodeText),
         sa.Column("main_search_key", sa.UnicodeText),
         sa.Column("heading", sa.UnicodeText),
         sa.Column("location", sa.UnicodeText),
@@ -78,22 +78,17 @@ class Doc:
         sa.Column("extras", sa.UnicodeText),
         sa.Column("logo_url", sa.UnicodeText),
         sa.Column("logo_path", sa.UnicodeText),
-        sa.Column("price_suggestion_amount", sa.Integer),
-        sa.Column("price_suggestion_currency_code", sa.UnicodeText),
-        sa.Column("price_total_amount", sa.Integer),
-        sa.Column("price_total_currency_code", sa.UnicodeText),
-        sa.Column("price_shared_cost_amount", sa.Integer),
-        sa.Column("price_shared_cost_currency_code", sa.UnicodeText),
+        sa.Column("price_range_suggestion_amount_from", sa.Integer),
+        sa.Column("price_range_suggestion_amount_to", sa.Integer),
+        sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
+        sa.Column("price_range_total_amount_from", sa.Integer),
+        sa.Column("price_range_total_amount_to", sa.Integer),
+        sa.Column("price_range_total_currency_code", sa.UnicodeText),
         sa.Column("area_range_size_from", sa.Integer),
         sa.Column("area_range_size_to", sa.Integer),
         sa.Column("area_range_unit", sa.UnicodeText),
         sa.Column("area_range_description", sa.UnicodeText),
-        sa.Column("area_plot_size", sa.Integer),
-        sa.Column("area_plot_unit", sa.UnicodeText),
-        sa.Column("area_plot_description", sa.UnicodeText),
         sa.Column("organisation_name", sa.UnicodeText),
-        sa.Column("local_area_name", sa.UnicodeText),
-        sa.Column("number_of_bedrooms", sa.Integer),
         sa.Column("owner_type_description", sa.UnicodeText),
         sa.Column("property_type_description", sa.UnicodeText),
         sa.Column("viewing_times", sa.UnicodeText),
@@ -101,19 +96,26 @@ class Doc:
         sa.Column("coordinates_lon", sa.Float),
         sa.Column("ad_type", sa.Integer),
         sa.Column("image_urls", sa.UnicodeText),
-        sa.Column("ad_id", sa.Integer),
-        sa.Column("price_range_suggestion_amount_from", sa.Integer),
-        sa.Column("price_range_suggestion_amount_to", sa.Integer),
-        sa.Column("price_range_suggestion_currency_code", sa.UnicodeText),
-        sa.Column("price_range_total_amount_from", sa.Integer),
-        sa.Column("price_range_total_amount_to", sa.Integer),
-        sa.Column("price_range_total_currency_code", sa.UnicodeText),
         sa.Column("bedrooms_range_start", sa.Integer),
         sa.Column("bedrooms_range_end", sa.Integer),
+        sa.Column("ad_id", sa.UnicodeText),
+        sa.Column("price_suggestion_amount", sa.Integer),
+        sa.Column("price_suggestion_currency_code", sa.UnicodeText),
+        sa.Column("price_suggestion_price_unit", sa.UnicodeText),
+        sa.Column("price_total_amount", sa.Integer),
+        sa.Column("price_total_currency_code", sa.UnicodeText),
+        sa.Column("price_total_price_unit", sa.UnicodeText),
+        sa.Column("price_shared_cost_amount", sa.Integer),
+        sa.Column("price_shared_cost_currency_code", sa.UnicodeText),
+        sa.Column("price_shared_cost_price_unit", sa.UnicodeText),
+        sa.Column("area_plot_size", sa.Integer),
+        sa.Column("area_plot_unit", sa.UnicodeText),
+        sa.Column("area_plot_description", sa.UnicodeText),
+        sa.Column("local_area_name", sa.UnicodeText),
+        sa.Column("number_of_bedrooms", sa.Integer),
         sa.Column("area_size", sa.Integer),
         sa.Column("area_unit", sa.UnicodeText),
         sa.Column("area_description", sa.UnicodeText),
-        sa.Column("furnished_state", sa.UnicodeText),
     )
     _id: int = field(init=False)
     _last_updated: datetime.datetime = field(init=False)
@@ -136,22 +138,17 @@ class Doc:
     extras: list | None = None
     logo_url: str | None = None
     logo_path: str | None = None
-    price_suggestion_amount: int | None = None
-    price_suggestion_currency_code: str | None = None
-    price_total_amount: int | None = None
-    price_total_currency_code: str | None = None
-    price_shared_cost_amount: int | None = None
-    price_shared_cost_currency_code: str | None = None
+    price_range_suggestion_amount_from: None | int | None = None
+    price_range_suggestion_amount_to: None | int | None = None
+    price_range_suggestion_currency_code: str | None = None
+    price_range_total_amount_from: None | int | None = None
+    price_range_total_amount_to: None | int | None = None
+    price_range_total_currency_code: str | None = None
     area_range_size_from: None | int | None = None
     area_range_size_to: None | int | None = None
     area_range_unit: str | None = None
     area_range_description: str | None = None
-    area_plot_size: int | None = None
-    area_plot_unit: str | None = None
-    area_plot_description: str | None = None
     organisation_name: str | None = None
-    local_area_name: str | None = None
-    number_of_bedrooms: int | None = None
     owner_type_description: str | None = None
     property_type_description: str | None = None
     viewing_times: list | None = None
@@ -159,16 +156,23 @@ class Doc:
     coordinates_lon: float | int | None = None
     ad_type: int | None = None
     image_urls: list | None = None
-    ad_id: int | None = None
-    price_range_suggestion_amount_from: int | None = None
-    price_range_suggestion_amount_to: int | None = None
-    price_range_suggestion_currency_code: str | None = None
-    price_range_total_amount_from: int | None = None
-    price_range_total_amount_to: int | None = None
-    price_range_total_currency_code: str | None = None
     bedrooms_range_start: int | None = None
     bedrooms_range_end: int | None = None
+    ad_id: int | None = None
+    price_suggestion_amount: int | None = None
+    price_suggestion_currency_code: str | None = None
+    price_suggestion_price_unit: str | None = None
+    price_total_amount: int | None = None
+    price_total_currency_code: str | None = None
+    price_total_price_unit: str | None = None
+    price_shared_cost_amount: int | None = None
+    price_shared_cost_currency_code: str | None = None
+    price_shared_cost_price_unit: str | None = None
+    area_plot_size: int | None = None
+    area_plot_unit: str | None = None
+    area_plot_description: str | None = None
+    local_area_name: str | None = None
+    number_of_bedrooms: int | None = None
     area_size: int | None = None
     area_unit: str | None = None
     area_description: str | None = None
-    furnished_state: str | None = None

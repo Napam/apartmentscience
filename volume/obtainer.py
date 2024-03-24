@@ -1,7 +1,6 @@
 from datetime import datetime
 import json
 import utils
-import classes
 import logging
 import os
 import shutil
@@ -12,10 +11,7 @@ from sqlalchemy import orm
 import asyncio
 import aiohttp
 import config
-import utils
-from pprint import pprint
 from typing import Generator, Iterable, Union
-import tqdm
 
 engine = sa.create_engine(config.SQL_ADDRESS, echo=False, future=True)
 logger = logging.getLogger(__name__)
@@ -45,7 +41,7 @@ def clearTempdir():
         shutil.rmtree(config.TMP_DIR)
 
 
-def storeJsonInTempdir(response: dict, file: int):
+def storeJsonInTempdir(response: dict, file: str):
     config.TMP_DIR.mkdir(exist_ok=True, parents=True)
     (config.TMP_DIR / file).write_text(json.dumps(response, indent=2))
     logger.info(f"Stored {config.TMP_DIR / file}")
@@ -72,7 +68,8 @@ async def getResponse(
 
 
 def filterGenerator(filters: Iterable[FinnFilterDict], maxDepth: float = float("inf")):
-    mapFilterItems = lambda filters: (FinnLocationFilter(**f) for f in filters)
+    def mapFilterItems(filters):
+        return (FinnLocationFilter(**f) for f in filters)
 
     def _filterGenerator(
         filters: Iterable[FinnLocationFilter], currDepth: int = 0
@@ -91,7 +88,7 @@ async def obtainRawIndexData():
     clearTempdir()
     session = aiohttp.ClientSession()
     responseJson = await getResponse(session, {"searchkey": "SEARCH_ID_REALESTATE_HOMES", "vertical": "realestate"})
-    logger.info(f"Sucessfully obtained first response for metadata")
+    logger.info("Sucessfully obtained first response for metadata")
     locationFilters = utils.findFirst(responseJson["filters"], lambda x: x["name"] == "location")
     locationFilters = locationFilters["filter_items"]
 
@@ -159,5 +156,5 @@ def storeIndexData():
 
 
 if __name__ == "__main__":
-    asyncio.run(obtainRawIndexData())
+    # asyncio.run(obtainRawIndexData())
     storeIndexData()

@@ -1,5 +1,4 @@
 import json
-from types import FunctionType
 from typing import Any, Callable, Iterable, MutableMapping
 from pygments import highlight, lexers, formatters
 import datetime as dt
@@ -7,7 +6,8 @@ import config
 import os
 import tqdm
 
-isoNow = lambda: dt.datetime.now().isoformat()
+def isoNow():
+    return dt.datetime.now().isoformat()
 
 
 def jprint(data: dict, file: str | None = None, indent: int = 4) -> str | None:
@@ -19,7 +19,7 @@ def jprint(data: dict, file: str | None = None, indent: int = 4) -> str | None:
         print(highlight(dump, lexers.JsonLexer(), formatters.TerminalFormatter(bg="dark")))
 
 
-def _flatten_dict_gen(d: MutableMapping, parentKey: str, sep: str, mapper: FunctionType):
+def _flatten_dict_gen(d: MutableMapping, parentKey: str, sep: str, mapper: Callable):
     for k, v in d.items():
         newKey = parentKey + sep + k if parentKey else k
         if isinstance(v, MutableMapping):
@@ -29,10 +29,13 @@ def _flatten_dict_gen(d: MutableMapping, parentKey: str, sep: str, mapper: Funct
 
 
 def flattenDict(
-    d: MutableMapping, parent_key: str = "", sep: str = "_", mapper: FunctionType | None = None
+    d: MutableMapping, parent_key: str = "", sep: str = "_", mapper: Callable | None = None
 ):
     if mapper is None:
-        mapper = lambda x: x
+        def _mapper(x):
+            return x
+
+        mapper = _mapper
 
     return dict(_flatten_dict_gen(d, parent_key, sep, mapper))
 
@@ -55,4 +58,4 @@ def findFirst(x: Iterable[Any], predicate: Callable[[Any], bool]) -> Any | None:
 
 
 if __name__ == "__main__":
-    from pprint import pprint
+    pass

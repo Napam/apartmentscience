@@ -40,8 +40,8 @@ def flatTypeMapToPythonClassString(
 
     buffer = io.StringIO()
     if table is not None:
-        buffer.write(f"@mapper_registry.mapped\n")
-        buffer.write(f"@dataclass\n")
+        buffer.write("@mapper_registry.mapped\n")
+        buffer.write("@dataclass\n")
     buffer.write(f"class {name}:\n{indent}")
 
     if table is not None:
